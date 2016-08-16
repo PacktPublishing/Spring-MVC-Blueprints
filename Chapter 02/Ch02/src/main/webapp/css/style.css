@@ -1,0 +1,309 @@
+/* project: internet center template
+   author: luka cvrk (www.solucija.com) */
+
+   
+/* default styles
+   -------------- */
+   
+body { 
+	padding: 0; 
+	margin: 0; 
+	font: 0.7em Arial, sans-serif; 
+	line-height: 1.5em;
+	background: #fff; 
+	color: #454545; 
+}
+
+a {
+	color: #185DA0;
+	background: inherit;
+}
+
+a:hover {
+	color: #9EC068;
+	background: inherit;	
+}
+
+a.title {
+	color: #FE6700;
+	background: #FFF;
+}
+
+h1 {
+	font: bold 2em Arial, Sans-Serif;
+	letter-spacing: -1px; 
+	padding: 7px 0 0 8px;
+	margin: 0;
+}
+
+h1 a, h2 a {
+	text-decoration: none;
+}
+
+h1 a:hover, h2 a:hover {
+	color: #FF6600;
+	background: #FFF;
+}
+
+
+h2 { 
+	margin: 0; 
+	padding: 0; 
+	font: bold 1.7em Arial, Sans-Serif; 
+	letter-spacing: -1px;
+}
+
+h2 { 
+	font-size: 16px;
+	margin-bottom: 5px; 
+	color: #000; 
+	background: inherit;
+}
+
+p {	
+	margin: 0 0 5px 0;
+	
+}
+
+ul { 
+	margin: 0; 
+	padding : 0; 
+	list-style : none; 
+}
+
+form { 
+	margin: 0; 
+}
+
+input.search { 
+	width: 199px; 
+	border: none;
+	background: url(input.gif); 
+	padding: 4px; 
+}
+
+input.login { 
+	width: 150px;
+	border: none; 
+	background: url(logininput.gif); 
+	padding: 4px; 
+}
+
+/* layout
+   ------ */
+
+.content { 
+	margin: 10px auto;
+	width: 760px; 
+}
+
+.header { 
+	height: 45px; 
+}
+
+.top_info {
+	float: right;
+	width: 570px;
+	padding: 0 0 4px 0;
+	border-bottom: 1px solid #eee;
+}
+
+	.top_info_left {
+		width: 240px;
+		float: left;
+	}
+
+	.top_info_right {
+		float: right;
+		width: 290px;
+		padding: 0 0 0 35px;
+		border-left: 1px solid #eee;
+	}
+
+.slogan {
+	font-size: 0.9em;
+	width: 160px;
+}
+
+
+.bar { 
+	clear: both;
+	font-size: 1.1em;
+	height: 30px; 
+	margin: 0 0 0 0px; 
+}
+
+	.bar li { 
+		margin: 0; 
+		padding: 4px 10px 8px 10px;
+		color: #808080;
+		background: #FFF;
+		float: left; 
+	}
+	
+	.bar li.active { 
+		background: #FFF url(bar.gif) no-repeat center bottom; 
+		color: #9EC068;
+		font-weight: bold; 
+		padding-bottom: 8px; 
+	}
+
+	.bar a { 
+		font-weight: bold;
+		color: #4A8EBC; 
+		background: inherit;	
+	} 
+
+.search_field { 
+	background: #DCF2B8 url(barbg.gif) no-repeat; 
+	color: #000;
+	border-top: 1px solid #9EC068;
+	border-bottom: 1px solid #9EC068;
+	clear: both;
+	text-align: center; 
+	padding: 10px 0 5px 0;
+}
+
+.subheader {
+	margin: 3px 0 10px 0;
+	padding: 8px;
+	background: #f4f4f4 url(subheaderbg.gif) no-repeat;
+	color: #808080;
+	border-bottom: 1px solid #ccc;
+}
+
+/* left side
+   --------- */
+
+.left {
+	float: left;
+	width: 435px;
+	margin: 0 0 10px 0;
+}
+	.left_articles {
+		margin: 0px 0 10px 0;
+	}
+
+	.left_links {
+		border: 1px solid #eee;
+		padding: 10px 10px 10px 15px;	
+		margin: 0 0 10px 0;
+	}
+	
+	.left_links:hover {
+		border: 1px solid #ccc;
+	}
+	
+	.left_message {
+		border: 1px solid #eee;
+		padding: 10px 10px 10px 75px;	
+		margin: 0 0 10px 0;
+		background: #fff url(questionmark.gif) no-repeat center left;
+		color: #454545; 
+	}
+	
+	.left_message:hover {
+		border: 1px solid #ccc;
+	}
+	
+		.left_side {
+			float: left;
+			width: 180px;
+		}
+		
+		.right_side {
+			float: right;
+			width: 200px;
+			border-left: 1px solid #eee;
+			padding: 0 0 0 20px;
+		}
+		
+	.left_box {
+		background: #f4f4f4;
+		color: #000;
+		border: 1px solid #ccc;
+		padding: 10px;
+	}
+	
+/* right side
+   ---------- */
+		
+.right {
+	float: right;
+	width: 310px;
+	margin: 0 0 10px 0;
+}
+
+	.right_login {
+		padding: 10px;
+		margin: 0 0 10px 0;
+		background: #A9D4F2;
+		color: #246088;
+		border-top: 1px solid #4A8EBC;
+		border-bottom: 1px solid #4A8EBC;
+	}
+
+	.right_articles {
+		border: 1px solid #eee;
+		padding: 8px;	
+		margin: 0 0 10px 0;
+	}
+	
+	.right_articles:hover {
+		border: 1px solid #ccc;
+	}
+		
+.image {
+	float: left;
+	margin: 0 9px 3px 0;
+}
+
+.fileContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+
+/* Example stylistic flourishes */
+
+.fileContainer {
+    background: red;
+    border-radius: .5em;
+    float: left;
+    padding: .5em;
+}
+
+.fileContainer [type=file] {
+    cursor: pointer;
+}
+}
+/* footer
+   ------ */
+
+.footer { 
+	clear: both; 
+	text-align: center;
+	line-height: 1.8em;
+	color: #808080;
+	background: #FFF;
+	padding: 10px 0 10px 0;
+	border-top: 1px solid #eee;
+}
+
+.footer a {
+	color: #9EC068;
+	background: #fff;
+}
