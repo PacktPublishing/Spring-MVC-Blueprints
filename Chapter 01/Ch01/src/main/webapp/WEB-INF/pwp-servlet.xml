@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:oxm="http://www.springframework.org/schema/oxm" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+
+
+	<context:component-scan base-package="org.packt.personal.web.portal" />
+
+	<mvc:annotation-driven />
+	<mvc:default-servlet-handler />
+	<mvc:resources mapping="/css/**" location="/css/" />
+
+	<!-- View Resolver -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+		<property name="basename">
+			<value>config.views</value>
+		</property>
+	</bean>
+
+	<!-- Resource Bundle -->
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename">
+			<value>config.errors</value>
+		</property>
+	</bean>
+
+	<!-- Validators -->
+
+	<bean id="indexValidator" class="org.packt.personal.web.portal.validator.IndexValidator" />
+	<bean id="personalValidator"
+		class="org.packt.personal.web.portal.validator.PersonalValidator" />
+	<bean id="professionalValidator"
+		class="org.packt.personal.web.portal.validator.ProfessionalValidator" />
+
+	<!-- Spring JavaMail Configuration -->
+	<!-- Please provide correct email information -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<!-- SMTP settings -->
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="587" />
+		<property name="username" value="youremail@gmail.com" />
+		<property name="password" value="password" />
+
+		<property name="javaMailProperties">
+			<!-- additional properties specific to JavaMail -->
+			<props>
+				<prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.smtp.auth">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="emailTemplate" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="your-email@gmail.com" />
+		<property name="to" value="your-email@alibata.com" />
+		<property name="subject" value="Custom Email Message..." />
+		<property name="text">
+			<value>
+		<![CDATA[
+            Hi %s,
+
+            This is a pre-configured email message. 
+
+            Regards,
+            %s.
+		]]>
+			</value>
+		</property>
+	</bean>
+
+</beans>
+
+
