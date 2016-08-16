@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	 	<appender name="dailyRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		    <!-- daily rollover -->
+			<FileNamePattern>../smtp/logs/days/admin.%d{yyyy-MM-dd}.log</FileNamePattern>
+			
+			<!-- keep 30 days' worth of history -->
+			<maxHistory>30</maxHistory>			
+		</rollingPolicy>
+ 
+		<encoder>
+			<Pattern>%d{HH:mm:ss.SSS} [%thread] %-10level %logger{50} - %msg %n</Pattern>
+		</encoder> 	    
+  	</appender>
+  	<appender name="minuteRollingFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		    <!-- rollover every minute -->
+			<FileNamePattern>../smtp/logs/minutes/admin.%d{yyyy-MM-dd_HH-mm}.log</FileNamePattern>
+			
+			<!-- keep 1 day worth of history -->
+			<maxHistory>1</maxHistory>			
+		</rollingPolicy>
+ 
+		<encoder>
+			<Pattern>%d{HH:mm:ss.SSS} [%thread] %-10level %logger{50} - %msg %n</Pattern>
+		</encoder> 	    
+  	</appender>  	
+  		
+	<logger name="org.packt.academic.student.portal" additivity="false">
+	    <level value="DEBUG" />
+		<appender-ref ref="dailyRollingFileAppender"/>
+		<appender-ref ref="minuteRollingFileAppender"/>
+		<appender-ref ref="consoleAppender" />
+	</logger>
+
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="consoleAppender" />
+	</root>
+</configuration> 

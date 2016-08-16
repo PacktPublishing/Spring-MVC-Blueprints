@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:oxm="http://www.springframework.org/schema/oxm" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+	<import resource="jdbc.xml" />
+
+	<bean id="applicationDao"
+		class="org.packt.academic.student.portal.dao.impl.ApplicationDaoImpl">
+	</bean>
+	<bean id="applicationService"
+		class="org.packt.academic.student.portal.service.impl.ApplicationServiceImpl">
+		<property name="applicationDao" ref="applicationDao" />
+	</bean>
+
+	<bean id="loginDao" class="org.packt.academic.student.portal.dao.impl.LoginDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<bean id="loginService"
+		class="org.packt.academic.student.portal.service.impl.LoginServiceImpl">
+		<property name="loginDao" ref="loginDao" />
+	</bean>
+
+	<bean id="enrollmentService"
+		class="org.packt.academic.student.portal.service.impl.EnrollmentServiceImpl" />
+
+	<bean id="managementDao"
+		class="org.packt.academic.student.portal.dao.impl.ManagementDaoImpl" />
+	<bean id="managementService"
+		class="org.packt.academic.student.portal.service.impl.ManagementServiceImpl" />
+
+	<bean id="reportDao"
+		class="org.packt.academic.student.portal.dao.impl.ReportDaoImpl" />
+	<bean id="enrollmentDao"
+		class="org.packt.academic.student.portal.dao.impl.EnrollmentDaoImpl" />
+	<bean id="reportService"
+		class="org.packt.academic.student.portal.service.impl.ReportServiceImpl" />
+
+	<bean id="gwaDao" class="org.packt.academic.student.portal.dao.impl.GWADaoImpl" />
+	<bean id="gwaService"
+		class="org.packt.academic.student.portal.service.impl.GWAServiceImpl" />
+
+</beans>
