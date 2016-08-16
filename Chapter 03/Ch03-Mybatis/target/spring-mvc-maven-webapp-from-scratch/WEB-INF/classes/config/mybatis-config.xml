@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<mappers>
+		<mapper resource="/mybatis/mapping/application_mapper.xml" />
+		<mapper resource="/mybatis/mapping/login_mapper.xml" />
+		<mapper resource="/mybatis/mapping/enrollment_mapper.xml" />
+		<mapper resource="/mybatis/mapping/gwa_mapper.xml" />
+		<mapper resource="/mybatis/mapping/management_mapper.xml" />
+		<mapper resource="/mybatis/mapping/report_mapper.xml" />
+	</mappers>
+</configuration>

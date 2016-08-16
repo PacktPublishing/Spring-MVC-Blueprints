@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="profilePersistency">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>org.packt.academic.student.portal.model.data.Tblregistration</class>
+		<class>org.packt.academic.student.portal.model.data.Tbladminuser</class>
+		<class>org.packt.academic.student.portal.model.data.Tblcourses</class>
+		<class>org.packt.academic.student.portal.model.data.Tbldepartment</class>
+		<class>org.packt.academic.student.portal.model.data.Tblfaculty</class>
+		<class>org.packt.academic.student.portal.model.data.Tblfacultyuser</class>
+		<class>org.packt.academic.student.portal.model.data.Tblgpa</class>
+		<class>org.packt.academic.student.portal.model.data.Tblstudentgrades</class>
+		<class>org.packt.academic.student.portal.model.data.Tblstudents</class>
+		<class>org.packt.academic.student.portal.model.data.Tblstudentuser</class>
+		<class>org.packt.academic.student.portal.model.data.Level</class>
+		<class>org.packt.academic.student.portal.model.data.Semester</class>
+		<class>org.packt.academic.student.portal.model.data.Status</class>
+	</persistence-unit>
+</persistence>

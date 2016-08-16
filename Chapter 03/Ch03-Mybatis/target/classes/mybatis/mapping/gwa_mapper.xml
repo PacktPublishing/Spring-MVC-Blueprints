@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+    <mapper namespace="org.packt.academic.student.portal.mapper.GWAMapper" >
+    <cache/>
+    
+    <select id="getStudentGrade" resultMap="gradesResult" parameterType="int">
+		SELECT * FROM tblstudentgrades where studentID = #{studId} order by courseCode, level, semester
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblstudentgrades" id="gradesResult">
+	    <id property="id" column="id" />
+		<result property="facultyId" column="facultyId" />
+		<result property="level" column="level" />
+		<result property="semester" column="semester" />
+		<result property="grade" column="grade" />
+		<result property="middleName" column="middleName" />
+		<association property="tblstudents" resultMap="studentMap"/>
+		<association property="tblcourses" resultMap="courseMap"/>
+	</resultMap>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblstudents" id="studentMap">
+		<id property="studentId" column="studentID" />
+	</resultMap>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblcourses" id="courseMap">
+		<id property="courseCode" column="courseCode" />
+	</resultMap>
+		   
+    <update id="setStudentGrade" parameterType="org.packt.academic.student.portal.model.data.Tblstudentgrades">   
+      UPDATE  tblstudentgrades SET grade = #{grade} WHERE studentID = #{tblstudents.studentId} 
+                                                         and courseCode like #{tblcourses.courseCode} and facultyId = #{facultyId}
+    </update>
+    
+    <insert id="setGWA" parameterType="map" >
+	     INSERT INTO tblgpa (studentID, gpaCalculated) VALUES (#{studentId}, #{gpa})
+    </insert>
+     <update id="updateGWA" parameterType="map">   
+         UPDATE tblgpa SET gpaCalculated = #{gpa}  where studentID =#{studentId}
+    </update>
+    
+    
+    </mapper>
+  

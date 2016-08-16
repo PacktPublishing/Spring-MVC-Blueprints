@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="org.packt.academic.student.portal.mapper.EnrollmentMapper" >
+    <cache/>
+    
+    <select id="getCourses" resultMap="coursesResult">
+		SELECT * FROM tblcourses
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblcourses" id="coursesResult">
+		<id property="courseCode" column="courseCode" />
+		<result property="courseName" column="courseName" />
+		<result property="courseUnit" column="courseUnit" />
+		<result property="deptId" column="departmentID" />
+	</resultMap>
+	
+	<select id="getFaculty" resultMap="facultyResult">
+		SELECT * FROM tblfaculty
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblfaculty" id="facultyResult">
+		<id property="facultyId" column="facultyId" />
+		<result property="deptId" column="departmentId" />
+		<result property="firstName" column="firstName" />
+		<result property="lastName" column="lastName" />
+		<result property="middleName" column="middleName" />
+	</resultMap>
+	
+	<insert id="setCourse" parameterType="org.packt.academic.student.portal.model.data.Tblstudentgrades" >
+	     INSERT INTO tblstudentgrades (studentID, courseCode, grade, semester, level, facultyId)
+          VALUES (#{tblstudents.studentId, jdbcType=INTEGER}, #{tblcourses.courseCode, jdbcType=VARCHAR}, 0.0, #{semester, jdbcType=INTEGER}, #{level, jdbcType=INTEGER}, #{facultyId, jdbcType=INTEGER})
+      
+    </insert>
+	
+	<insert id="setStudentGrade" parameterType="org.packt.academic.student.portal.model.data.Tblstudentgrades" >
+	     INSERT INTO tblstudentgrades (studentID, courseCode, grade, semester, level, facultyId)
+          VALUES (#{tblstudents.studentId, jdbcType=INTEGER}, #{tblcourses.courseCode, jdbcType=VARCHAR}, 0.0, #{semester, jdbcType=INTEGER}, #{level, jdbcType=INTEGER}, #{facultyId, jdbcType=INTEGER})
+      
+    </insert>
+	
+	<select id="getStudentList" resultMap="gradesResult" parameterType="int">
+		SELECT * FROM tblstudentgrades where facultyId = #{facultyId} order by courseCode, level, semester
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblstudentgrades" id="gradesResult">
+	    <id property="id" column="id" />
+		<result property="facultyId" column="facultyId" />
+		<result property="level" column="level" />
+		<result property="semester" column="semester" />
+		<result property="grade" column="grade" />
+		<result property="middleName" column="middleName" />
+		<association property="tblstudents" resultMap="studentMap"/>
+		<association property="tblcourses" resultMap="courseMap"/>
+	</resultMap>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblstudents" id="studentMap">
+		<id property="studentId" column="studentID" />
+	</resultMap>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblcourses" id="courseMap">
+		<id property="courseCode" column="courseCode" />
+	</resultMap>
+	
+	
+    <select id="getFacultyStudent" resultMap="joinResult" parameterType="int">
+		SELECT c.studentID, c.courseCode, c.grade, c.semester, c.level, c.facultyId, s.studentID, s.firstName, s.lastName, s.middleName, s.gender, s.status, s.degree  
+		FROM tblstudents s INNER JOIN tblstudentgrades c ON s.studentID = c.studentID where c.facultyId = #{facultyId};
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.form.JoinStudCourseTakenForm" id="joinResult">
+	    <result property="courseCode" column="c.courseCode" />
+		<result property="grade" column="c.grade" />
+		<result property="semester" column="c.semester" />
+		<result property="level" column="c.level" />
+		<result property="facultyId" column="c.facultyId" />
+		<result property="studentId" column="c.studentID" />
+		<result property="firstName" column="s.firstName" />
+		<result property="lastName" column="s.lastName" />
+		<result property="middleName" column="s.middleName" />
+		<result property="gender" column="s.gender" />
+		<result property="status" column="s.status" />
+		<result property="degree" column="s.degree" />
+
+	</resultMap>
+    
+    
+    
+    </mapper>

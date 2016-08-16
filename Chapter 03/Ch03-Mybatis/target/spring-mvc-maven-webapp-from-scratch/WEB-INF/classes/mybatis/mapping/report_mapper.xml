@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.packt.academic.student.portal.mapper.ReportMapper">
+	<cache />
+
+	<select id="getCourses" resultMap="coursesResult">
+		SELECT * FROM tblcourses
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblcourses"
+		id="coursesResult">
+		<id property="courseCode" column="courseCode" />
+		<result property="courseName" column="courseName" />
+		<result property="courseUnit" column="courseUnit" />
+		<result property="deptId" column="departmentID" />
+	</resultMap>
+
+	<select id="getFaculty" resultMap="facultyResult">
+		SELECT * FROM tblfaculty
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblfaculty"
+		id="facultyResult">
+		<id property="facultyId" column="facultyId" />
+		<result property="deptId" column="departmentId" />
+		<result property="firstName" column="firstName" />
+		<result property="lastName" column="lastName" />
+		<result property="middleName" column="middleName" />
+	</resultMap>
+
+
+	<select id="getDepartment" resultMap="deptResult">
+		SELECT * FROM tbldepartment
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tbldepartment"
+		id="deptResult">
+		<id property="departmentId" column="departmentID" />
+		<result property="departmentName" column="departmentName" />
+
+	</resultMap>
+
+	<select id="getStudentId" resultMap="studResult" parameterType="String">
+		SELECT * FROM tblstudents WHERE username LIKE #{username}
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblstudents"
+		id="studResult">
+		<id property="studentId" column="studentID" />
+		<result property="firstName" column="firstName" />
+		<result property="middleName" column="middleName" />
+		<result property="lastName" column="lastName" />
+		<result property="birthDate" column="birthDate" />
+		<result property="gender" column="gender" />
+		<result property="address" column="address" />
+		<result property="mobile" column="mobile" />
+		<result property="email" column="email" />
+	</resultMap>
+	
+	
+	<select id="getFacultyId" resultMap="facultyResultId" parameterType="String">
+	          SELECT * FROM tblfaculty WHERE username LIKE #{username}
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblfaculty"
+		id="facultyResultId">
+		<id property="facultyId" column="facultyId" />
+		<result property="deptId" column="departmentId" />
+		<result property="middleName" column="middleName" />
+		<result property="lastName" column="lastName" />
+		<result property="firstName" column="firstName" />
+	</resultMap>
+
+
+</mapper>

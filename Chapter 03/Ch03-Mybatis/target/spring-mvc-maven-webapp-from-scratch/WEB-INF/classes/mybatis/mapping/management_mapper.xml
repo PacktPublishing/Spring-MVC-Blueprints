@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+   <mapper namespace="org.packt.academic.student.portal.mapper.ManagementMapper" >
+    <cache/>
+    
+    <insert id="setCourse" parameterType="org.packt.academic.student.portal.model.data.Tblcourses" >
+       INSERT INTO tblcourses (departmentID, courseCode, courseName, courseUnit) 
+         VALUES (#{deptId, jdbcType=INTEGER}, #{courseCode, jdbcType=VARCHAR}, #{courseName, jdbcType=VARCHAR}, #{courseUnit, jdbcType=INTEGER})
+    </insert>
+    
+     <insert id="setDepartment" parameterType="org.packt.academic.student.portal.model.data.Tbldepartment" >
+      INSERT INTO tbldepartment (departmentID, departmentName) VALUES (#{departmentID, jdbcType=INTEGER }, #{departmentName,jdbcType=VARCHAR})
+       
+    </insert>
+    
+    <insert id="setStudent" parameterType="org.packt.academic.student.portal.model.data.Tblstudents" >
+      INSERT INTO tblstudents (studentID, firstName, lastName, middleName, gender, birthDate, status, degree, level, semester, address, mobile, email)
+           VALUES (#{studentId, jdbcType=INTEGER}, #{firstName, jdbcType=VARCHAR}, #{lastName, jdbcType=VARCHAR}, #{middleName, jdbcType=VARCHAR}, 
+                #{gender, jdbcType=VARCHAR}, #{birthDate, jdbcType=DATE}, #{status, jdbcType=INTEGER}, #{degree, jdbcType=VARCHAR}, #{level, jdbcType=INTEGER}, 
+                #{semester, jdbcType=INTEGER}, #{address, jdbcType=VARCHAR}, #{mobile, jdbcType=VARCHAR}, #{email, jdbcType=VARCHAR})
+           
+    </insert>
+
+     <insert id="setFaculty" parameterType="org.packt.academic.student.portal.model.data.Tblfaculty" >
+       INSERT INTO tblfaculty (facultyId, firstName, lastName, middleName, departmentId, username) 
+           VALUES (#{facultyId, jdbcType=INTEGER }, #{firstName, jdbcType=VARCHAR}, #{lastName, jdbcType=VARCHAR }, #{middleName, jdbcType=VARCHAR}, 
+           #{deptId, jdbcType=INTEGER}, #{username, jdbcType=VARCHAR})
+      
+    </insert>
+    
+    <insert id="setFacultyLogin" parameterType="org.packt.academic.student.portal.model.data.Tblfacultyuser" >
+           INSERT INTO tblfacultyuser (username, password) VALUES (#{username, jdbcType=VARCHAR}, #{password, jdbcType=VARCHAR})
+      
+    </insert>
+    
+    </mapper>

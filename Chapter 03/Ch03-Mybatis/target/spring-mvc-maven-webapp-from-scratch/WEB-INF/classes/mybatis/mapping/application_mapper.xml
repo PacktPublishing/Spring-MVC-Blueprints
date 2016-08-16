@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.packt.academic.student.portal.mapper.ApplicationMapper" >
+    <cache/>
+    <insert id="setPendingApp" parameterType="org.packt.academic.student.portal.model.data.Tblregistration" >
+        insert into tblRegistration (firstName, middleName, lastName, birthDate, gender, address, mobile, email, username, password)
+        values ( #{firstName,jdbcType=VARCHAR}, #{middleName,jdbcType=VARCHAR}, #{lastName,jdbcType=VARCHAR}, #{birthDate,jdbcType=DATE}, #{gender,jdbcType=VARCHAR}, 
+                 #{address,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR},  #{email,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR})
+    </insert>
+   
+	<select id="getPendingApp" resultMap="applicationResult">
+		SELECT * FROM tblRegistration
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblregistration" id="applicationResult">
+		<id property="regId" column="regId" />
+		<result property="firstName" column="firstName" />
+		<result property="middleName" column="middleName" />
+		<result property="lastName" column="lastName" />
+		<result property="birthDate" column="birthDate" />
+		<result property="gender" column="gender" />
+		<result property="address" column="address" />
+		<result property="mobile" column="mobile" />
+		<result property="email" column="email" />
+	</resultMap>
+
+	
+	<select id="getPending" resultMap="applicationResult2" parameterType="int">
+			SELECT * FROM tblRegistration WHERE regId = #{regId}
+	</select>
+	<resultMap type="org.packt.academic.student.portal.model.data.Tblregistration" id="applicationResult2">
+		<id property="regId" column="regId" />
+		<result property="firstName" column="firstName" />
+		<result property="middleName" column="middleName" />
+		<result property="lastName" column="lastName" />
+		<result property="birthDate" column="birthDate" />
+		<result property="gender" column="gender" />
+		<result property="address" column="address" />
+		<result property="mobile" column="mobile" />
+		<result property="email" column="email" />
+	</resultMap>
+		
+	<insert id="setRegister" parameterType="org.packt.academic.student.portal.model.data.Tblstudents" >
+        insert into tblStudents (firstName, middleName, lastName, birthDate, gender, address, mobile, email, status, degree, level, semester)
+        values ( #{firstName,jdbcType=VARCHAR}, #{middleName,jdbcType=VARCHAR}, #{lastName,jdbcType=VARCHAR}, #{birthDate,jdbcType=DATE}, #{gender,jdbcType=VARCHAR}, 
+                 #{address,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR},  #{email,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{degree,jdbcType=VARCHAR}, #{level,jdbcType=INTEGER}, #{semester,jdbcType=INTEGER})
+    </insert>
+    
+     <delete id="deletePending" parameterType="org.packt.academic.student.portal.model.data.Tblregistration" >
+        DELETE FROM tblRegistration WHERE regId = #{regId}
+    </delete>
+    
+    <insert id="setStudentAccount" parameterType="org.packt.academic.student.portal.model.data.Tblstudentuser" >
+        INSERT INTO tblStudentUser (username, password) VALUES (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR})
+    </insert>
+	
+   
+</mapper>
