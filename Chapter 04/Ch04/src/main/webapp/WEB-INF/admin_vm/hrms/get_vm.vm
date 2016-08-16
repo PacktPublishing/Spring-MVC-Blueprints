@@ -1,0 +1,17 @@
+<h2>User list</h2>
+<table border="1">
+<tr>
+  <th>Employee ID</th>
+  <th>Username</th>
+  <th>Password</th>
+  <th>Role</th>
+</tr>
+#foreach($user in $allUsers)
+   <tr>
+    <td>$user.hrmsEmployeeDetails.empId</td>
+    <td>$user.username</td>
+ <td>$user.password</td>
+ <td>$user.role</td>
+   </tr>
+#end
+</table>

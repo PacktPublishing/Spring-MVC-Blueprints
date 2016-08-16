@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>Spring & Velocity</title>   
+</head>
+<body>
+   <div>
+       #parse("/WEB-INF/admin_vm/hrms/header.vm")
+   </div>
+    
+    
+   <div>
+
+      
+     $screen_content
+ 
+   </div>
+    
+   <div>
+       #parse("/WEB-INF/admin_vm/hrms/footer.vm")
+   </div>
+</body>
+</html>
