@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.packt.hotel.portal.mapper.MenuMapper" >
+
+    <select id="getMenu" resultMap="menuResult">
+		SELECT * from hms_menu
+	</select>
+	<resultMap type="org.packt.hotel.portal.model.data.HmsMenu" id="menuResult">
+		<id property="id" column="id" />
+		<result property="menuDate" column="menuDate" />
+		<result property="menuName" column="menuName" />
+		<result property="menuPlan" column="menuPlan" />
+		<result property="qty" column="qty" />
+		<result property="price" column="price" />
+	</resultMap>
+
+</mapper>

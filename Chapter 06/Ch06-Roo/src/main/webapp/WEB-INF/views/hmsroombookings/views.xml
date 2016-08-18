@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="hmsroombookings/list">
+        <put-attribute name="body" value="/WEB-INF/views/hmsroombookings/list.jspx"/>
+    </definition>
+<definition extends="default" name="hmsroombookings/show">
+        <put-attribute name="body" value="/WEB-INF/views/hmsroombookings/show.jspx"/>
+    </definition>
+<definition extends="default" name="hmsroombookings/create">
+        <put-attribute name="body" value="/WEB-INF/views/hmsroombookings/create.jspx"/>
+    </definition>
+<definition extends="default" name="hmsroombookings/update">
+        <put-attribute name="body" value="/WEB-INF/views/hmsroombookings/update.jspx"/>
+    </definition>
+</tiles-definitions>

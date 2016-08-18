@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+</head>
+
+<body>
+	<div th:fragment="resultList" th:unless="${#lists.isEmpty(users)}" class="results-block">
+		<table>
+			<thead>
+				<tr>
+					<th th:text="#{results.guest.id}">Id</th>
+					<th th:text="#{results.guest.surname}">Surname</th>
+					<th th:text="#{results.guest.name}">Name</th>
+					<th th:text="#{results.guest.country}">Country</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="guest : ${users}">
+					<td th:text="${guest.id}">id</td>
+					<td th:text="${guest.surname}">surname</td>
+					<td th:text="${guest.name}">name</td>
+					<td th:text="${guest.country}">country</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

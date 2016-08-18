@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.packt.hotel.portal.mapper.RoomMapper" >
+    <cache/>
+       
+	<select id="getRoomTypes" resultMap="roomTypeResult">
+		SELECT * FROM hms_room_type
+	</select>
+	<resultMap type="org.packt.hotel.portal.model.data.HmsRoomType" id="roomTypeResult">
+		<id property="id" column="id" />
+		<result property="type" column="type" />
+	</resultMap>
+	
+	<insert id="setRoomType" parameterType="org.packt.hotel.portal.model.data.HmsRoomType" >
+        insert into hms_room_type (id, type)
+        values ( #{id,jdbcType=INTEGER}, #{type,jdbcType=VARCHAR} )
+    </insert>
+	
+	<select id="getRoomDetails" resultMap="roomDetailsMap">
+		SELECT a.name, a.description, a.typeId, b.id, b.type FROM hms_rooms a INNER JOIN hms_room_type b
+		ON a.typeid = b.id
+	</select>
+	<resultMap type="org.packt.hotel.portal.model.form.JoinRoomTypeForm" id="roomDetailsMap">
+		<id property="id" column="id" />
+		<result property="type" column="type" />
+		<result property="description" column="description" />
+		<result property="name" column="name" />
+		
+	</resultMap>
+	
+    <delete id="deleteRoomType" parameterType="org.packt.hotel.portal.model.data.HmsRoomType" >
+        delete from hms_room_type
+        where id = #{id}
+    </delete>
+    
+    <update id="updateRoomType" parameterType="org.packt.hotel.portal.model.data.HmsRoomType">
+       update hms_room_type
+       set type = #{type}
+       where id = #{id}
+    </update>
+</mapper>

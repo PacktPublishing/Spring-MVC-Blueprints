@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <definition name="hms.home" template="/WEB-INF/tview/tilesmain.jsp">
+    <put-attribute name="title" value="HMS - Hotel Management System" />
+    <put-attribute name="header" type="template" value="/WEB-INF/tview/header.jsp" />
+    <put-attribute name="body" type="template" value="/WEB-INF/tview/tilesbody.jsp" />
+    <put-attribute name="footer" type="template" value="/WEB-INF/tview/footer.jsp" />
+  </definition>
+</tiles-definitions>

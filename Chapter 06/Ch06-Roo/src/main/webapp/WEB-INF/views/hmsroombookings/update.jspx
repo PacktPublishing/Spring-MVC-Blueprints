@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_packt_hotel_portal_jpa_data_HmsRoomBooking" modelAttribute="hmsRoomBooking" path="/hmsroombookings" versionField="none" z="N9nbA37xuxm3qXsYryTu3gMIrv4=">
+        <field:select field="bookingMenuId" id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_bookingMenuId" itemValue="id" items="${hmsmenubookings}" path="/hmsmenubookings" z="Iced/h35fL2b9RxBGMJxhUwv5Xo="/>
+        <field:select field="roomId" id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_roomId" itemValue="id" items="${hmsroomsmasterlists}" path="/hmsroomsmasterlists" z="sLE3MjdFgtHRNjp+t/RQjuBnW+g="/>
+        <field:select field="profileId" id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_profileId" itemValue="id" items="${hmsuserprofiles}" path="/hmsuserprofiles" z="xYkupKovIfzW+sQVF/OPvOBv3RU="/>
+        <field:datetime dateTimePattern="${hmsRoomBooking_bookingdate_date_format}" field="bookingDate" id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_bookingDate" required="true" z="djYcArrkbVMZga224Z2eN4Z9vHg="/>
+        <field:input field="bookingStatus" id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_bookingStatus" required="true" z="HLaV1Dmc46PE78lRCYGE6zoQX14="/>
+    </form:update>
+</div>

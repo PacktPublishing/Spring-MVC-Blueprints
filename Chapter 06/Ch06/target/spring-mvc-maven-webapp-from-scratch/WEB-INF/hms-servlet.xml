@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+   
+    <import resource="jdbc.xml"/>
+    <import resource="dao_services.xml"/>
+   
+	<context:component-scan base-package="org.packt.hotel.portal" />
+
+	 <mvc:annotation-driven>
+        <mvc:argument-resolvers>
+            <bean class="org.springframework.mobile.device.site.SitePreferenceWebArgumentResolver" />           
+            <bean class="org.springframework.mobile.device.DeviceWebArgumentResolver" />
+        </mvc:argument-resolvers>
+    </mvc:annotation-driven>
+    <mvc:interceptors>
+        <!-- Resolve the device which has generated the request -->
+        <bean class="org.springframework.mobile.device.DeviceResolverHandlerInterceptor" />
+     
+        <!-- User's site preference -->
+        <bean class="org.springframework.mobile.device.site.SitePreferenceHandlerInterceptor" />
+     
+        <!-- Redirects users to the device specific site -->
+        <bean class="org.springframework.mobile.device.switcher.SiteSwitcherHandlerInterceptor" factory-method="urlPath">
+            <constructor-arg value="/hms/mobile.html" />
+            <constructor-arg value="/hms/tablet.html" />
+            <constructor-arg value="/ch06" />
+        </bean>
+        
+        <bean
+            class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+            <property name="paramName" value="locale" />
+        </bean>
+    </mvc:interceptors>
+     
+    <!-- Device aware view resolving -->
+    <bean id="liteDeviceDelegatingViewResolver" class="org.springframework.mobile.device.view.LiteDeviceDelegatingViewResolver">
+        <constructor-arg>
+            <ref bean="viewResolver"/>
+        </constructor-arg>
+     
+        <property name="mobilePrefix" value="m/" />
+        <property name="tabletPrefix" value="t/" />
+        <property name="enableFallback" value="true" />
+        <property name="order" value="3" />
+    </bean>
+    
+	<mvc:default-servlet-handler />
+    <mvc:resources mapping="/hms/css/*" location="/css/" /> 
+    <mvc:resources mapping="/hms/images/*" location="/images/" />
+    <mvc:resources mapping="/hms/js/*" location="/js/" />
+    <mvc:resources mapping="/css/*" location="/css/" />
+	<mvc:resources mapping="/js/*" location="/js/" />
+	<mvc:resources mapping="/api/js/*" location="/js/" />
+	<mvc:resources mapping="/api/images/*" location="/images/" />
+    <mvc:resources mapping="/extjs/*" location="/extjs/" />
+	<mvc:resources mapping="/resources/*" location="/resources/" />
+
+    <bean id="messageSource"
+           class="org.springframework.context.support.ResourceBundleMessageSource">
+         <property name="basenames"><value>config.messages, i18n.messages</value></property>
+         <property name="defaultEncoding" value="UTF-8"/>
+        <property name="useCodeAsDefaultMessage" value="false"/>
+    </bean>
+    
+    <bean id="localeResolver"
+        class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+        <property name="defaultLocale" value="en" />
+        <property name="cookieName" value="myAppLocaleCookie"></property>
+        <property name="cookieMaxAge" value="3600"></property>
+    </bean>
+   
+	<!-- View Resolver -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+		<property name="basename">
+			<value>config.views</value>
+		</property>
+		<property name="order" value="0" />
+	</bean>
+	
+	<bean id="themeSource" class="org.springframework.ui.context.support.ResourceBundleThemeSource">
+	    <property name="basenamePrefix" value="config.hms_theme-" />
+    </bean>
+    
+    <bean id="themeResolver" class="org.springframework.web.servlet.theme.CookieThemeResolver">
+	    <property name="defaultThemeName" value="main" />
+	    <property name="cookieMaxAge" value="2400" />
+	    <property name="cookieName" value="hmscookie" />
+    </bean>
+    
+    <bean id="themeChangeInterceptor" class="org.springframework.web.servlet.theme.ThemeChangeInterceptor">
+	    <property name="paramName" value="theme" />
+    </bean>
+    
+    <mvc:interceptors>
+       <ref bean="themeChangeInterceptor"></ref>
+    </mvc:interceptors>
+    
+    <bean id="thymeleafViewResolver" class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+       <property name="templateEngine" ref="templateEngine" />
+       <property name="order" value="2" />
+       
+    </bean>
+    
+    <bean id="templateResolver"
+       class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
+        <property name="prefix" value="/WEB-INF/thymeleaf/" />
+        <property name="suffix" value=".html" />
+        <property name="templateMode" value="HTML5" />
+         <property name="order" value="1" />
+    </bean>
+    
+    <bean id="templateEngine"
+       class="org.thymeleaf.spring4.SpringTemplateEngine">
+       <property name="templateResolver" ref="templateResolver" />
+    </bean>
+    
+    <!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+        <bean id="tilesConfigurer"
+        class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles/tiles.xml</value>
+                <value>/WEB-INF/tiles/details.xml</value>
+            </list>
+        </property>
+    </bean>
+    
+</beans>

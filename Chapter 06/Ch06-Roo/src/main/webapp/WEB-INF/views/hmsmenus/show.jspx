@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_packt_hotel_portal_jpa_data_HmsMenu" object="${hmsmenu}" path="/hmsmenus" z="vNjRXIf07fBuL7nbVh7KjGoId8I=">
+        <field:display date="true" dateTimePattern="${hmsMenu_menudate_date_format}" field="menuDate" id="s_org_packt_hotel_portal_jpa_data_HmsMenu_menuDate" object="${hmsmenu}" z="4LTxIJQMfNkffmC61QBELr54uc0="/>
+        <field:display field="menuName" id="s_org_packt_hotel_portal_jpa_data_HmsMenu_menuName" object="${hmsmenu}" z="8xAb2ULWV+VYwjJo4VBvQYpBvmg="/>
+        <field:display field="menuPlan" id="s_org_packt_hotel_portal_jpa_data_HmsMenu_menuPlan" object="${hmsmenu}" z="lXlTAuEWp0RJjvqZso5l4/+W2dU="/>
+        <field:display field="qty" id="s_org_packt_hotel_portal_jpa_data_HmsMenu_qty" object="${hmsmenu}" z="v57KXDRL9lNBri3h3jkSEXQ2m5Q="/>
+        <field:display field="price" id="s_org_packt_hotel_portal_jpa_data_HmsMenu_price" object="${hmsmenu}" z="ePHcZolra+3a1+oFNn1RtRt+lnY="/>
+    </page:show>
+</div>

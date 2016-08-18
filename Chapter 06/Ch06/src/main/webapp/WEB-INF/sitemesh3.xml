@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sitemesh>
+    <mapping path="/hms/decorate/*" decorator="/WEB-INF/decorators/templateDecorator.jsp"/>
+    <mapping path="/hms/membership/*" decorator="/WEB-INF/decorators/templateLogin.jsp"/>
+</sitemesh>

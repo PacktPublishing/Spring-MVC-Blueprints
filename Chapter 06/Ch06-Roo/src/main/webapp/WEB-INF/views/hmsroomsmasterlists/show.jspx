@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_packt_hotel_portal_jpa_data_HmsRoomsMasterlist" object="${hmsroomsmasterlist}" path="/hmsroomsmasterlists" z="z/lAq7fTZetoCDtlAKi56m0yHNc=">
+        <field:display field="typeId" id="s_org_packt_hotel_portal_jpa_data_HmsRoomsMasterlist_typeId" object="${hmsroomsmasterlist}" z="XV3DVtJnMRMqcNDwdLHbWD2ZTD0="/>
+        <field:display field="statusId" id="s_org_packt_hotel_portal_jpa_data_HmsRoomsMasterlist_statusId" object="${hmsroomsmasterlist}" z="nxC4D/FH6Ro+3bSyxkHW4YfHBf8="/>
+        <field:display field="roomId" id="s_org_packt_hotel_portal_jpa_data_HmsRoomsMasterlist_roomId" object="${hmsroomsmasterlist}" z="hOsfUGui5UGC712JmgXVjpAdqJs="/>
+        <field:display field="description" id="s_org_packt_hotel_portal_jpa_data_HmsRoomsMasterlist_description" object="${hmsroomsmasterlist}" z="eRWN/miLl7WoG8jcWSwlJvJowHg="/>
+    </page:show>
+</div>

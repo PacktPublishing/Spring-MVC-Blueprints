@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.packt.hotel.portal.mapper.FreeBookingMapper" >
+    <cache/>
+    <insert id="setFreeBooking" parameterType="org.packt.hotel.portal.model.data.HmsFreeBooking" >
+        insert into hms_free_booking  (name, mobile, length, heads, arrivalDate, comment, email)
+        values ( #{name,jdbcType=VARCHAR}, #{mobile,jdbcType=VARCHAR}, #{length,jdbcType=INTEGER}, #{heads,jdbcType=INTEGER}, #{arrivalDate,jdbcType=DATE}, #{comment,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR})
+    </insert>
+    
+ </mapper>

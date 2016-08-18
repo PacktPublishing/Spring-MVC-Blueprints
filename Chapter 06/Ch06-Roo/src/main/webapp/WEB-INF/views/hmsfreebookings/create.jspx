@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_packt_hotel_portal_jpa_data_HmsFreeBooking" modelAttribute="hmsFreeBooking" path="/hmsfreebookings" render="${empty dependencies}" z="cjOXwgRZwDyUtqSp2s4tv2g242I=">
+        <field:input field="name" id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_name" required="true" z="YzzC4jeuQekOHnoDjXctkHHLTFE="/>
+        <field:input field="mobile" id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_mobile" required="true" z="Cy/2nH/J3BNpWiZai83w44RTgf4="/>
+        <field:input field="length" id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_length" required="true" validationMessageCode="field_invalid_integer" z="J3g0SNsXOLXaSFYAsTrvI9yWNCI="/>
+        <field:input field="heads" id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_heads" required="true" validationMessageCode="field_invalid_integer" z="RGPtr0zKmPmLepVa0trrBiWQFwo="/>
+        <field:datetime dateTimePattern="${hmsFreeBooking_arrivaldate_date_format}" field="arrivalDate" id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_arrivalDate" required="true" z="FWhO22IhCDOo0EHhgPUKi9qgrcg="/>
+        <field:input field="comment" id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_comment" z="hTknzyCyu5EdiwsA7eD1JKLXVes="/>
+        <field:input field="id" id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_id" required="true" validationMessageCode="field_invalid_integer" z="OqVVP/0N5H6onMdlBB6rfrAHHCk="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_packt_hotel_portal_jpa_data_HmsFreeBooking" render="${not empty dependencies}" z="+X/WrQInYY9rWH9g0qa+kNDcRd8="/>
+</div>

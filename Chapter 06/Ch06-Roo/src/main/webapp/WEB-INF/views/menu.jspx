@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_hmsfreebooking" z="TOJS8g5l8foQ1KG5VmesJTxeR6I=">
+            <menu:item id="i_hmsfreebooking_new" messageCode="global_menu_new" url="/hmsfreebookings?form" z="tqSh6rfb0d0oEk9xUyROcgShEvs="/>
+            <menu:item id="i_hmsfreebooking_list" messageCode="global_menu_list" url="/hmsfreebookings?page=1&amp;size=${empty param.size ? 10 : param.size}" z="w1fdEStJ1Hx5VhB1Msk/Q06rpEI="/>
+        </menu:category>
+        <menu:category id="c_hmsmenu" z="ENdcerhdMA8n+2LRkRY6H26cvSQ=">
+            <menu:item id="i_hmsmenu_new" messageCode="global_menu_new" url="/hmsmenus?form" z="EokEVbdUMPo0GYknksPAvqoVYqo="/>
+            <menu:item id="i_hmsmenu_list" messageCode="global_menu_list" url="/hmsmenus?page=1&amp;size=${empty param.size ? 10 : param.size}" z="z43QgZ3uMOYCCH0iVZnjkbUvWts="/>
+        </menu:category>
+        <menu:category id="c_hmsuserprofile" z="PvViX3rCaz6ABr9UcVWSO7EIzDc=">
+            <menu:item id="i_hmsuserprofile_new" messageCode="global_menu_new" url="/hmsuserprofiles?form" z="0ECusvYSbxlLJmOVbIR4QNhpNBs="/>
+            <menu:item id="i_hmsuserprofile_list" messageCode="global_menu_list" url="/hmsuserprofiles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="FU7TtT+kMGVwEJaKkDpyqlKj8Ag="/>
+        </menu:category>
+        <menu:category id="c_hmsroomsmasterlist" z="inbhCJJjEpXEFieK6GWXALwVLMo=">
+            <menu:item id="i_hmsroomsmasterlist_new" messageCode="global_menu_new" url="/hmsroomsmasterlists?form" z="U8YIKjW+yALqoSjKk+3155A2S2U="/>
+            <menu:item id="i_hmsroomsmasterlist_list" messageCode="global_menu_list" url="/hmsroomsmasterlists?page=1&amp;size=${empty param.size ? 10 : param.size}" z="1cr+G3zCQKr1eT1PSbMtZE4yxYY="/>
+        </menu:category>
+        <menu:category id="c_status" z="XzEnvQ4n4916mWFCszpAxymOJls=">
+            <menu:item id="i_status_new" messageCode="global_menu_new" url="/statuses?form" z="6KKSWSWkKNkfIXGi3tBFfU6it68="/>
+            <menu:item id="i_status_list" messageCode="global_menu_list" url="/statuses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="qv84Ee4UJYpTszeuYd3LIUKv4cg="/>
+        </menu:category>
+        <menu:category id="c_hmsroombooking" z="h6HBu4TMZ8NOpOysPKicUAzewBA=">
+            <menu:item id="i_hmsroombooking_new" messageCode="global_menu_new" url="/hmsroombookings?form" z="aI4Ia11Z5vXpeGuur5R02pNmY7Q="/>
+            <menu:item id="i_hmsroombooking_list" messageCode="global_menu_list" url="/hmsroombookings?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lQdzlm1/xlVaq4+Snt8G5v2LPRU="/>
+        </menu:category>
+        <menu:category id="c_hmsmenubooking" z="UPi5ZjfG27MH/orM+0ZfVY8Zc9k=">
+            <menu:item id="i_hmsmenubooking_new" messageCode="global_menu_new" url="/hmsmenubookings?form" z="LvWjGeUV8qldaGTtGj8mGDKNW7E="/>
+            <menu:item id="i_hmsmenubooking_list" messageCode="global_menu_list" url="/hmsmenubookings?page=1&amp;size=${empty param.size ? 10 : param.size}" z="0ZVqbLcdXTgroRJjKZExM2uzcAA="/>
+        </menu:category>
+        <menu:category id="c_hmsroomtype" z="BrsgHP8Ge9DV7L+jSnuAys3xkbg=">
+            <menu:item id="i_hmsroomtype_new" messageCode="global_menu_new" url="/hmsroomtypes?form" z="SRIK3193zHvDzDUPIE96YDpA+sY="/>
+            <menu:item id="i_hmsroomtype_list" messageCode="global_menu_list" url="/hmsroomtypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="aMQ9z3Br/V4UwHjrtK4a95QQnkE="/>
+        </menu:category>
+        <menu:category id="c_hmslogin" z="agcJO/odw2yvghznNr2hkmxufII=">
+            <menu:item id="i_hmslogin_new" messageCode="global_menu_new" url="/hmslogins?form" z="o4j7+2ChZN86qrn3cpOob0fwjss="/>
+            <menu:item id="i_hmslogin_list" messageCode="global_menu_list" url="/hmslogins?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ZHuXU21bP/7UR35q4yTnJ6J/rFE="/>
+        </menu:category>
+        <menu:category id="c_hmsrooms" z="udEAy008ZBkYsEqGdQi2juERNkI=">
+            <menu:item id="i_hmsrooms_new" messageCode="global_menu_new" url="/hmsroomses?form" z="wCD5lPYmLILidu850jqjz9Tp/Xo="/>
+            <menu:item id="i_hmsrooms_list" messageCode="global_menu_list" url="/hmsroomses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Fxwu9roHgHiunBhQOdJbfl4qV94="/>
+        </menu:category>
+    </menu:menu>
+</div>

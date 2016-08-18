@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+<title>Thymeleaf example</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" type="text/css" media="screen"/>
+<script th:src="@{/js/functions.js}" type="text/javascript"></script>
+<script th:src="@{/js/jquery-min-1.9.1.js}" type="text/javascript"></script>
+</head>
+
+<body>
+<div style="width:800px; margin:0 auto;">
+
+<h1 th:text="#{home.title}">HMS-Profiles</h1>
+
+<div class="generic-info">
+	<h3 th:text="#{hotel.information}">Hotel Information</h3>
+</div>
+<br/>
+<div class="main-block">
+	<!-- Insert new guest -->
+	<span class="subtitle">Add User Profile</span>
+	<br/>
+	<form id="guestForm" th:action="@{/guests/insert.html}" th:object="${user}" method="post">
+		<div class="insertBlock">
+		<span class="formSpan">
+			    <label for="usernameId" th:text="#{label.id}"></label>
+			    
+				<input id="usernameId" type="text" th:field="*{id}" required="required"/>
+				<br/>
+			</span>
+			<span class="formSpan">
+			    <label for="usernameId" th:text="#{label.username}"></label>
+			   
+				<input id="usernameId" type="text" th:field="*{username}" required="required"/>
+				 <br />
+			</span>
+			<span class="formSpan">
+			    <label for="passwordId" th:text="#{label.password}"></label>
+			    
+				<input id="passwordId" type="text" th:field="*{password}" required="required"/>
+				<br />
+			</span>
+			<span class="formSpan" style="margin-bottom:20px">
+			    <label for="firstNameId" th:text="#{label.firstName}">name:</label>
+			   
+				<input id="firstNameId" type="text" th:field="*{firstName}" required="required"/>
+					  <br />
+			</span>
+			<span class="formSpan">
+				<label for="lastNameId" th:text="#{label.lastName}">surname:</label>
+				
+				<input id="lastNameId" type="text" th:field="*{lastName}" required="required"/>
+				<br />
+			</span>
+			<span class="formSpan">
+				<label for="addressId" th:text="#{label.address}">surname:</label>
+				
+				<input id="addressId" type="text" th:field="*{address}" required="required"/>
+				<br />
+			</span>
+			<span class="formSpan">
+				<label for="mobileId" th:text="#{label.mobile}">surname:</label>
+				
+				<input id="mobileId" type="text" th:field="*{mobile}" required="required"/>
+				<br />
+			</span>
+			<span class="formSpan">
+				<label for="emailId" th:text="#{label.email}">surname:</label>
+				
+				<input id="emailId" type="text" th:field="*{email}" required="required"/>
+				<br />
+			</span>
+			
+			<input type="submit" value="add" th:value="SUBMIT"/>
+			<span class="messageContainer" th:unless="${#strings.isEmpty(errorMessage)}" th:text="#{${errorMessage}}"></span>
+		</div>
+	</form>
+
+	
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_packt_hotel_portal_jpa_data_HmsMenuBooking" modelAttribute="hmsMenuBooking" path="/hmsmenubookings" versionField="none" z="uYeUJWDyV4dQiP7Zi1eRIxt8BnU=">
+        <field:simple field="hmsRoomBookings" id="c_org_packt_hotel_portal_jpa_data_HmsMenuBooking_hmsRoomBookings" messageCode="entity_reference_not_managed" messageCodeAttribute="Hms Room Booking" z="KUAOKgvtTJjq6DpJtacLd6mtfGU="/>
+        <field:select field="menuId" id="c_org_packt_hotel_portal_jpa_data_HmsMenuBooking_menuId" itemValue="id" items="${hmsmenus}" path="/hmsmenus" z="6v0/0X40Exx76Py9VlpAv/99fQc="/>
+        <field:input field="bookId" id="c_org_packt_hotel_portal_jpa_data_HmsMenuBooking_bookId" required="true" validationMessageCode="field_invalid_integer" z="+8krQe+gpfejlHtz+GJvwT3kicU="/>
+    </form:update>
+</div>

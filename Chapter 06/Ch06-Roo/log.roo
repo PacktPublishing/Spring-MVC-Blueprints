@@ -1,0 +1,19 @@
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-10-20 20:29:29
+project --topLevelPackage org.packt.hotel.portal --projectName Ch06-Roo --java 7 --packaging JAR
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-10-20 20:29:32
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-10-20 20:29:37
+help
+persistence setup --database MYSQL --provider HIBERNATE --userName root --password admin --hostName localhost --databaseName hms
+database reverse engineer --schema hms --package ~.jpa.data --disableVersionFields --activeRecord true --disableGeneratedIdentifiers
+database reverse engineer --schema hms --package ~.jpa.data --disableVersionFields --activeRecord true --disableGeneratedIdentifiers --includeNonPortableAttributes  true
+web mvc setup
+web mvc all --package ~.web  
+// [failed]  perform package
+// [failed] perform package
+help
+ controller all --package ~.web
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-10-20 21:11:55
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log opened at 2015-10-20 21:13:18
+help 
+web mvc scaffold --class ~.web.HmsLoginController --backingType ~.jpa.data.HmsLogin --path /login
+// Spring Roo 1.3.1.RC1 [rev 4877cfb] log closed at 2015-10-21 09:04:53

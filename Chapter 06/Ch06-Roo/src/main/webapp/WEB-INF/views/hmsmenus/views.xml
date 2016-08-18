@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="hmsmenus/list">
+        <put-attribute name="body" value="/WEB-INF/views/hmsmenus/list.jspx"/>
+    </definition>
+<definition extends="default" name="hmsmenus/show">
+        <put-attribute name="body" value="/WEB-INF/views/hmsmenus/show.jspx"/>
+    </definition>
+<definition extends="default" name="hmsmenus/create">
+        <put-attribute name="body" value="/WEB-INF/views/hmsmenus/create.jspx"/>
+    </definition>
+<definition extends="default" name="hmsmenus/update">
+        <put-attribute name="body" value="/WEB-INF/views/hmsmenus/update.jspx"/>
+    </definition>
+</tiles-definitions>

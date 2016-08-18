@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<mappers>
+		<mapper resource="/mybatis/mapping/room_mapper.xml" />
+		<mapper resource="/mybatis/mapping/book_mapper.xml" />
+		<mapper resource="/mybatis/mapping/user_book_mapper.xml" />
+			<mapper resource="/mybatis/mapping/profile_mapper.xml" />
+				<mapper resource="/mybatis/mapping/menu_mapper.xml" />
+	</mappers>
+</configuration>

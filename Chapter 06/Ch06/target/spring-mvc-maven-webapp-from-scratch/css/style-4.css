@@ -1,0 +1,612 @@
+/*Getting the new tags to behave*/
+ARTICLE, ASIDE, AUDIO, CANVAS, COMMAND, DATALIST, DETAILS, EMBED, FIGCAPTION, FIGURE, FOOTER, HEADER, HGROUP, KEYGEN, METER, NAV, OUTPUT, PROGRESS, SECTION, SOURCE, VIDEO
+{
+	display: block;
+}
+MARK, RP, RT, RUBY, SUMMARY, TIME
+{
+	display: inline;
+}
+/*Left & Right alignment*/
+.left
+{
+	float: left;
+}
+.right
+{
+	float: right;
+}
+.wrapper
+{
+	width: 100%;
+	overflow: hidden;
+}
+/*Global properties ========================================================*/
+BODY
+{
+	background: #410744;
+	border: 0;
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #F282E7;
+	line-height: 20px;
+	min-width: 980px;
+}
+.ic, .ic A
+{
+	border: 0;
+	float: right;
+	background: #FFF;
+	color: #F00;
+	width: 50%;
+	line-height: 10px;
+	font-size: 10px;
+	margin: -220% 0 0;
+	overflow: hidden;
+	padding: 0;
+}
+.css3
+{
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .4);
+	position: relative;
+}
+/*Global Structure =============================================================*/
+.main
+{
+	margin: 0 auto;
+	width: 960px;
+	padding: 0 6px;
+}
+.bg1
+{
+	background: url(../images/bg.gif) repeat top center;
+}
+.bg2
+{
+	background: url(../images/bg_top.png) no-repeat top center;
+}
+.box
+{
+	background: #383139;
+	box-shadow: 0 0 6px #000;
+	-moz-box-shadow: 0 0 6px #000;
+	-webkit-box-shadow: 0 0 6px #000;
+	position: relative;
+}
+/*============================= main layout ======================*/
+A
+{
+	color: #AF069F;
+	text-decoration: underline;
+	outline: none;
+}
+A:hover
+{
+	text-decoration: none;
+}
+H1
+{
+	padding: 40px 0 0 38px;
+	float: left;
+}
+H2
+{
+	font-size: 21px;
+	line-height: 1.2em;
+	padding: 6px 0 15px;
+	color: #FFF;
+	letter-spacing: -1px;
+}
+H2 IMG
+{
+	margin-right: 15px;
+	float: left;
+}
+P
+{
+	padding-bottom: 20px;
+}
+/*============================= header ======================*/
+HEADER
+{
+	height: 116px;
+}
+#logo
+{
+	display: block;
+	text-indent: -9999px;
+	background: url(../images/logo.png) no-repeat 0 0;
+	width: 240px;
+	height: 46px;
+}
+.department
+{
+	float: right;
+	padding: 37px 35px 0 0;
+	color: #72716F;
+	text-align: right;
+}
+.department SPAN
+{
+	color: #FFF;
+}
+#menu
+{
+	background: #512D53;
+	padding: 10px 2px;
+	height: 39px;
+	margin-bottom: 10px;
+}
+#menu > LI
+{
+	border-right: 1px solid #F2F2F2;
+	float: left;
+}
+#menu .last
+{
+	border: 0;
+}
+#menu > LI > A
+{
+	display: block;
+	padding: 0 62px;
+	font-size: 16px;
+	color: #5D085B;
+	text-decoration: none;
+	line-height: 39px;
+}
+#menu > LI > A:hover, #menu > .active > A
+{
+	color: #2F1A30;
+}
+/*============================= content ======================*/
+#content
+{
+}
+.box1
+{
+	background: #FFF;
+	padding: 10px;
+}
+.box1 H2
+{
+	color: #888522;
+	padding: 7px 0 14px;
+}
+.button1, .button2
+{
+	display: inline-block;
+	background: #970876;
+	padding: 0 25px;
+	color: #EEE9F0;
+	line-height: 29px;
+	position: relative;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	text-decoration: none;
+}
+.button2
+{
+	background: #12110F;
+	color: #FFF;
+	padding: 0 22px;
+}
+.button1:hover
+{
+	background: #2A2824;
+	color: #72716F;
+}
+.button2:hover
+{
+	background: #F3B21D;
+}
+/*=========== kwiks slider =========*/
+.kwicks-wrapper
+{
+	width: 640px;
+	overflow: hidden;
+}
+.kwicks
+{
+/*recommended styles for kwicks ul container*/
+	list-style: none;
+	position: relative;
+	margin: 0;
+	padding: 0 !important;
+	overflow: hidden;
+	height: 414px;
+	background: none;
+}
+.kwicks LI
+{
+/*these are required, but the values are up to you (must be pixel)*/
+	width: 160px;
+	height: 414px;
+/*do not change these*/
+	display: block;
+	overflow: hidden;
+	padding: 0 !important;
+/*if you need padding, do so with an inner div (or implement your own box-model hack)*/
+	cursor: pointer;
+	background: none !important;
+}
+.kwicks.horizontal LI
+{
+/*This is optional and will be disregarded by the script. However, it should be provided for non-JS enabled browsers.*/
+	margin-right: 0;
+/*Set to same as spacing option.*/
+	float: left;
+}
+.pad_bot1
+{
+	padding-bottom: 10px;
+}
+.pad_bot2
+{
+	padding-bottom: 24px;
+}
+.pad_bot3
+{
+	padding-bottom: 14px;
+}
+.pad_left1
+{
+	padding-left: 70px;
+}
+.pad_left2
+{
+	padding-left: 80px;
+}
+.pad
+{
+	padding: 20px 0 39px 40px;
+}
+.box1 .pad
+{
+	padding: 20px 0 15px 30px;
+}
+.marg_right1
+{
+	margin-right: 20px;
+}
+.line1
+{
+	background: url(../images/line_vert1.gif) repeat-y 280px 0;
+}
+.line2
+{
+	background: url(../images/line_vert1.gif) repeat-y 600px 0;
+	padding-bottom: 7px;
+}
+.line3
+{
+	background: url(../images/line_vert2.gif) repeat-y 600px 0;
+	padding-bottom: 11px;
+}
+.color1
+{
+	color: #F3B21D;
+}
+.color2
+{
+	color: #FFF;
+}
+.color3
+{
+	color: #000;
+}
+FIGURE
+{
+	padding-top: 4px;
+}
+.list1
+{
+}
+.list1 LI
+{
+	line-height: 24px;
+}
+.list1 A
+{
+	color: #F3B21D;
+	padding-left: 15px;
+	background: url(../images/marker_1.gif) no-repeat 0 5px;
+}
+.list2
+{
+	border-top: 1px solid #F2F2F2;
+	margin-top: -2px;
+	padding-bottom: 21px;
+}
+.list2 LI
+{
+	line-height: 23px;
+	border-bottom: 1px solid #F2F2F2;
+	padding: 0 6px;
+	color: #000;
+}
+.list2 SPAN
+{
+	float: right;
+}
+/*============================= footer ======================*/
+FOOTER
+{
+	padding: 47px 30px 47px 40px;
+	height: 44px;
+}
+FOOTER A
+{
+}
+FOOTER A:hover
+{
+}
+#icons
+{
+	padding-top: 5px;
+}
+#icons LI
+{
+	float: left;
+	padding-right: 11px;
+}
+#footer_menu
+{
+	padding-top: 4px;
+}
+#footer_menu LI
+{
+	padding-right: 26px;
+	background: url(../images/footer_menu_line.gif) no-repeat right 5px;
+	margin-right: 25px;
+	float: left;
+}
+#footer_menu .last
+{
+	padding-right: 0;
+	margin-right: 0;
+	background: none;
+}
+#footer_menu .active A
+{
+	text-decoration: none;
+}
+/*Tooltips*/
+.aToolTip
+{
+	background: #2A2824;
+	margin: 0;
+	padding: 2px 10px 3px;
+	font-size: 11px;
+	line-height: 1.2em;
+	position: absolute;
+}
+.aToolTip .aToolTipContent
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+/*============================= forms =============================*/
+#ContactForm
+{
+	padding: 0 10px 0 0;
+	margin-top: -2px;
+}
+#ContactForm .wrapper
+{
+	overflow: inherit;
+	min-height: 30px;
+	line-height: 24px;
+}
+#ContactForm .textarea_box
+{
+	min-height: 216px;
+}
+#ContactForm A
+{
+	margin-left: 10px;
+	float: right;
+	padding: 0 20px;
+}
+#ContactForm .input
+{
+	margin: 0;
+	float: right;
+	width: 482px;
+	height: 16px;
+	background: #FFF;
+	border: 1px solid #F2F2F2;
+	padding: 3px 5px;
+	color: #72716F;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+#ContactForm TEXTAREA
+{
+	overflow: auto;
+	margin: 0;
+	float: right;
+	width: 482px;
+	height: 198px;
+	background: #FFF;
+	border: 1px solid #F2F2F2;
+	padding: 3px 5px;
+	color: #72716F;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+#form1
+{
+	width: 240px;
+	float: right;
+	padding: 30px;
+	background: #12110F;
+}
+#form1 H2
+{
+	padding: 0 0 22px;
+	margin-top: -4px;
+	color: #FFF;
+}
+#form1 .right
+{
+	width: 140px;
+}
+#form1 .row
+{
+	height: 30px;
+	line-height: 22px;
+}
+#form1 .row_textarea
+{
+	height: 102px;
+	line-height: 22px;
+}
+#form1 .input
+{
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #72716F;
+	background: none;
+	height: 15px;
+	padding: 3px 5px;
+	width: 128px;
+	margin: 0;
+}
+#form1 TEXTAREA
+{
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #72716F;
+	background: none;
+	height: 54px;
+	padding: 3px 5px;
+	width: 222px;
+	margin: 0;
+	overflow: auto;
+}
+/*-------------
+* Hidden - used to hide the original form elements
+* -------------*/
+.jqTransformHidden
+{
+	display: none;
+}
+/*-------------
+* Inputs
+* -------------*/
+.jqTransformInputWrapper
+{
+	border: 1px solid #2A2824;
+	position: relative;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	float: right;
+	height: 21px;
+	width: 138px !important;
+}
+.jqTransformTextarea
+{
+	border: 1px solid #2A2824;
+	position: relative;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	height: 64px;
+	width: 100%;
+	margin-top: 4px;
+}
+/*-------------
+* Selects
+* -------------*/
+.jqTransformSelectWrapper
+{
+	position: relative;
+	float: right;
+}
+.jqTransformSelectWrapper DIV
+{
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #72716F;
+	display: block;
+	position: relative;
+	height: 21px;
+	line-height: 21px;
+	overflow: hidden;
+	cursor: pointer;
+	border: 1px solid #2A2824;
+	background: none;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+}
+.jqTransformSelectWrapper DIV SPAN
+{
+	padding: 0 0 0 5px;
+	display: block;
+}
+A.jqTransformSelectOpen
+{
+	display: block;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	width: 19px;
+	height: 19px;
+	background: url(../images/select.gif) no-repeat;
+}
+.jqTransformSelectWrapper UL
+{
+	position: absolute;
+	top: 24px;
+	left: 0;
+	background: #12110F;
+	border: 1px solid #2A2824;
+	border-radius: 1px;
+	-moz-border-radius: 1px;
+	-webkit-border-radius: 1px;
+	display: none;
+	z-index: 10;
+	padding: 5px 0;
+	height: 50px;
+	overflow: auto;
+}
+.jqTransformSelectWrapper UL A
+{
+	display: block;
+	padding: 0 5px;
+	text-decoration: none;
+	line-height: 20px;
+}
+.jqTransformSelectWrapper UL A.selected
+{
+	color: #FFF;
+}
+.jqTransformSelectWrapper UL A:hover, .jqTransformSelectWrapper UL A.selected:hover
+{
+	color: #FFF;
+	background: #2A2824;
+}
+#form1 .select1 .jqTransformSelectWrapper DIV, #form1 .select1 .jqTransformSelectWrapper UL
+{
+	width: 138px !important;
+}
+#form1 .select2 .jqTransformSelectWrapper DIV, #form1 .select2 .jqTransformSelectWrapper UL
+{
+	width: 42px !important;
+}
+#form1 .select2
+{
+	float: right;
+	width: 44px;
+	margin-left: 4px;
+}
+#form1 .button1
+{
+	float: right;
+	margin-left: 4px;
+	padding: 0 19px;
+}

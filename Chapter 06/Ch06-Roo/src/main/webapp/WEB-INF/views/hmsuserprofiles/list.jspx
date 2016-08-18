@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_packt_hotel_portal_jpa_data_HmsUserProfile" items="${hmsuserprofiles}" z="yW5WrlmDaYX6AIe9dx2FPqCDprw=">
+        <table:table data="${hmsuserprofiles}" id="l_org_packt_hotel_portal_jpa_data_HmsUserProfile" path="/hmsuserprofiles" z="xFiYa77PL6+dajiecKijtEhUUZg=">
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_hmsLogin" property="hmsLogin" z="IcikyhdiBnHUyAh6MGbsjgtAoq4="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_firstName" property="firstName" z="tyOidj2h/xBSrtLkwtLFHTEH3fs="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_lastName" property="lastName" z="MeKTVvTc/5I+0mP0AFWmBlkPOTQ="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_address" property="address" z="aFVSV+9T7tEGsj2gjGuCgPhzwKg="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_mobile" property="mobile" z="qIWWVuQfRvfQnl8VEqWVZb2NBjQ="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,66 @@
+<aspectj>
+<aspects>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsFreeBooking_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenuBooking_Roo_Jpa_Entity"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomBooking_Roo_Jpa_Entity"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsLogin_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomBooking_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.jpa.data.Status_Roo_Jpa_Entity"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomsMasterlist_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.web.HmsRoomTypeController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsUserProfile_Roo_Jpa_Entity"/>
+<aspect name="org.packt.hotel.portal.web.HmsLoginController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRooms_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenuBooking_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenuBooking_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenuBooking_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenu_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRooms_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsUserProfile_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.jpa.data.Status_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomBooking_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.web.HmsMenuController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomType_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.web.HmsRoomsController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.jpa.data.Status_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.web.HmsRoomBookingController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomType_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomBooking_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsLogin_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.web.HmsMenuBookingController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomType_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsUserProfile_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomsMasterlist_Roo_Jpa_Entity"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRooms_Roo_Jpa_Entity"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomBooking_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsLogin_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.web.HmsRoomsMasterlistController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRooms_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsFreeBooking_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsUserProfile_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsFreeBooking_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.web.StatusController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenu_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRooms_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.web.HmsUserProfileController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.web.HmsFreeBookingController_Roo_Controller"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsUserProfile_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.jpa.data.Status_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenu_Roo_Jpa_Entity"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsLogin_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsLogin_Roo_Jpa_Entity"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomsMasterlist_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsFreeBooking_Roo_Jpa_Entity"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenuBooking_Roo_Configurable"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomsMasterlist_Roo_Jpa_ActiveRecord"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsFreeBooking_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomsMasterlist_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomType_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.jpa.data.Status_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenu_Roo_DbManaged"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsMenu_Roo_ToString"/>
+<aspect name="org.packt.hotel.portal.jpa.data.HmsRoomType_Roo_Jpa_Entity"/>
+</aspects>
+</aspectj>
+

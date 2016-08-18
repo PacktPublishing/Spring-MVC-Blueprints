@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_packt_hotel_portal_jpa_data_HmsRoomBooking" items="${hmsroombookings}" z="NQQnV1vLE0ycKkZJBeVBHfnKX1A=">
+        <table:table data="${hmsroombookings}" id="l_org_packt_hotel_portal_jpa_data_HmsRoomBooking" path="/hmsroombookings" z="l97QnQdr36BLaUOe5xXGle1NGIc=">
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_bookingMenuId" property="bookingMenuId" z="2JrSReU/zQJ67Vrq2OS8nNOPF9o="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_roomId" property="roomId" z="M9kQJFBraO1rbU0tRrjW9xrhlm8="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_profileId" property="profileId" z="1trSRSk1Z4T+elvCFiRVrLHDhRs="/>
+            <table:column calendar="true" dateTimePattern="${hmsRoomBooking_bookingdate_date_format}" id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_bookingDate" property="bookingDate" z="Kt2uSpOlpSNPp8S5TfQalMIldoU="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsRoomBooking_bookingStatus" property="bookingStatus" z="iEbYim9Gwo7anFTtXx6E0louVQw="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_packt_hotel_portal_jpa_data_HmsUserProfile" modelAttribute="hmsUserProfile" path="/hmsuserprofiles" versionField="none" z="1VVX05AMnItPaUw5G4G/PcniOl0=">
+        <field:select field="hmsLogin" id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_hmsLogin" itemValue="id" items="${hmslogins}" path="/hmslogins" z="Zt3rtTzAJV3+Jk9P6hAeAwyL8Do="/>
+        <field:simple field="hmsRoomBookings" id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_hmsRoomBookings" messageCode="entity_reference_not_managed" messageCodeAttribute="Hms Room Booking" z="ACMwHRTT8ashvS50ukdu2dg/JTI="/>
+        <field:input field="firstName" id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_firstName" required="true" z="pRsvo7oZv5wXT9B3wsuvKge2et4="/>
+        <field:input field="lastName" id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_lastName" required="true" z="Lr2taWWFaQMosNk0TzaibkTQ/PI="/>
+        <field:input field="address" id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_address" required="true" z="iPuO0YxLZep3SAfipSHk9V377Xs="/>
+        <field:input field="mobile" id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_mobile" required="true" z="ayp+t3OyIo3tUjUPiCLNS354ja0="/>
+        <field:input field="email" id="c_org_packt_hotel_portal_jpa_data_HmsUserProfile_email" required="true" validationMessageCode="field_invalid_email" z="KzVkPLq33GQZyemZw8H4xNlZr+E="/>
+    </form:update>
+</div>
