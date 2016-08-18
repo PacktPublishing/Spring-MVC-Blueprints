@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_packt_hotel_portal_jpa_data_HmsLogin" object="${hmslogin}" path="/login" z="MNejl7vPBa0ys8p9F8ZpbTfrG/o=">
+        <field:display field="hmsUserProfile" id="s_org_packt_hotel_portal_jpa_data_HmsLogin_hmsUserProfile" object="${hmslogin}" z="CYGBV3JygW+eYok4J2PpzTEfjfU="/>
+        <field:display field="username" id="s_org_packt_hotel_portal_jpa_data_HmsLogin_username" object="${hmslogin}" z="T17TfX62pKXvlK27WRs3l0XUmqI="/>
+        <field:display field="password" id="s_org_packt_hotel_portal_jpa_data_HmsLogin_password" object="${hmslogin}" z="6Gc11lyN4hT8Vf6ueOv27j7fOPs="/>
+    </page:show>
+</div>

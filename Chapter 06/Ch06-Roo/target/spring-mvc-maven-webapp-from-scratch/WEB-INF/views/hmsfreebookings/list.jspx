@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_packt_hotel_portal_jpa_data_HmsFreeBooking" items="${hmsfreebookings}" z="6j7lEirzvawjm8VC+czgfxq7+Tg=">
+        <table:table data="${hmsfreebookings}" id="l_org_packt_hotel_portal_jpa_data_HmsFreeBooking" path="/hmsfreebookings" z="Z+dtbBGRavvTmfcjUOuDG1jsN78=">
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_name" property="name" z="ue1IewfJcvzdd9oBhfSjMT4mIIE="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_mobile" property="mobile" z="8W9HoZPnVasV9fOL09FGiguyCh4="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_length" property="length" z="pc8VP8pfTCt3LMsM+2zawfCUfbw="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_heads" property="heads" z="KhlU6XzE4XjHiZc/131xiAi8obk="/>
+            <table:column date="true" dateTimePattern="${hmsFreeBooking_arrivaldate_date_format}" id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_arrivalDate" property="arrivalDate" z="1Rj/yf+0ucdcnkQGZaV5N2FVh8M="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsFreeBooking_comment" property="comment" z="Z1b9/oaTH+GzPgNvu5o1d/cxCXU="/>
+        </table:table>
+    </page:list>
+</div>

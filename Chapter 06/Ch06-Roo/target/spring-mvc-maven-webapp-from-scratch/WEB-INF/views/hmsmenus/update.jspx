@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_packt_hotel_portal_jpa_data_HmsMenu" modelAttribute="hmsMenu" path="/hmsmenus" versionField="none" z="ITqb0ueIigCWibqycjYh3+Qibn0=">
+        <field:simple field="hmsMenuBookings" id="c_org_packt_hotel_portal_jpa_data_HmsMenu_hmsMenuBookings" messageCode="entity_reference_not_managed" messageCodeAttribute="Hms Menu Booking" z="onFBkdgKw1yfxpDeO6ySBqhXlus="/>
+        <field:datetime dateTimePattern="${hmsMenu_menudate_date_format}" field="menuDate" id="c_org_packt_hotel_portal_jpa_data_HmsMenu_menuDate" required="true" z="6MvQlcsVumP+4n1kp1vJbKG2q7o="/>
+        <field:input field="menuName" id="c_org_packt_hotel_portal_jpa_data_HmsMenu_menuName" required="true" z="s3au/qCe2NRGpZBGPGGWuXbwJ/s="/>
+        <field:input field="menuPlan" id="c_org_packt_hotel_portal_jpa_data_HmsMenu_menuPlan" required="true" z="nKumgXBs23RHgRlt21CyJl3DyY4="/>
+        <field:input field="qty" id="c_org_packt_hotel_portal_jpa_data_HmsMenu_qty" required="true" validationMessageCode="field_invalid_integer" z="8Wv1GEeWBI+YOFxfXNNIoLUxReE="/>
+        <field:input field="price" id="c_org_packt_hotel_portal_jpa_data_HmsMenu_price" required="true" validationMessageCode="field_invalid_number" z="oxKdwM24r6wYBDgZFn9jRgkyuM4="/>
+    </form:update>
+</div>

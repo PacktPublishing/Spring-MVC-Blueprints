@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_packt_hotel_portal_jpa_data_HmsLogin" modelAttribute="hmsLogin" path="/login" render="${empty dependencies}" z="5JUCRIbQshAE12jQDnf0frmYTxw=">
+        <field:select field="hmsUserProfile" id="c_org_packt_hotel_portal_jpa_data_HmsLogin_hmsUserProfile" itemValue="id" items="${hmsuserprofiles}" path="/hmsuserprofiles" z="ovJ0tSM0L/6p3ojPUBtf0Xozs+c="/>
+        <field:input field="username" id="c_org_packt_hotel_portal_jpa_data_HmsLogin_username" required="true" z="/2OLsgFakljjTALThxzoH2vw8Us="/>
+        <field:input field="password" id="c_org_packt_hotel_portal_jpa_data_HmsLogin_password" required="true" z="YFWWNA1/fSNyDCeif9BbXhWr5s0="/>
+        <field:input field="id" id="c_org_packt_hotel_portal_jpa_data_HmsLogin_id" required="true" validationMessageCode="field_invalid_integer" z="kqhQiIUavDVfLFIDqXAi9Lvtzwc="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_packt_hotel_portal_jpa_data_HmsLogin" render="${not empty dependencies}" z="i2cr3GEglCljmL50kNcD6kfJzQw="/>
+</div>

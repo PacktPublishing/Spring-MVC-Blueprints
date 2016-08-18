@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_packt_hotel_portal_jpa_data_HmsUserProfile" object="${hmsuserprofile}" path="/hmsuserprofiles" z="NAlpB7B10HVmiv6rxZ3xRabCG+Y=">
+        <field:display field="hmsLogin" id="s_org_packt_hotel_portal_jpa_data_HmsUserProfile_hmsLogin" object="${hmsuserprofile}" z="2B8FDeeXKU/TND1FF5uzVJuL3fY="/>
+        <field:display field="firstName" id="s_org_packt_hotel_portal_jpa_data_HmsUserProfile_firstName" object="${hmsuserprofile}" z="i0FHfybJ5IqKAZ/t/Qu81XpzoaU="/>
+        <field:display field="lastName" id="s_org_packt_hotel_portal_jpa_data_HmsUserProfile_lastName" object="${hmsuserprofile}" z="lKR3IoPIfu66A8IsiVo8xT6G2A0="/>
+        <field:display field="address" id="s_org_packt_hotel_portal_jpa_data_HmsUserProfile_address" object="${hmsuserprofile}" z="lGv9YkZDyCekZhIBo22ZEnKV2RY="/>
+        <field:display field="mobile" id="s_org_packt_hotel_portal_jpa_data_HmsUserProfile_mobile" object="${hmsuserprofile}" z="J3F5bfv1J+1RVMzZ7qythAAPnBI="/>
+        <field:display field="email" id="s_org_packt_hotel_portal_jpa_data_HmsUserProfile_email" object="${hmsuserprofile}" z="wslR0Oz023xYws27rEdBSWyNjXw="/>
+    </page:show>
+</div>

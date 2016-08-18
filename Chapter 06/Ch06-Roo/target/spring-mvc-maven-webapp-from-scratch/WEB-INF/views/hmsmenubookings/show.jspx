@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_packt_hotel_portal_jpa_data_HmsMenuBooking" object="${hmsmenubooking}" path="/hmsmenubookings" z="UU1cotRpOfLXJ9D4hnRXGcjNZ/Y=">
+        <field:display field="menuId" id="s_org_packt_hotel_portal_jpa_data_HmsMenuBooking_menuId" object="${hmsmenubooking}" z="nYXMDHqg93TPjotD7jY/xw9s4Po="/>
+        <field:display field="bookId" id="s_org_packt_hotel_portal_jpa_data_HmsMenuBooking_bookId" object="${hmsmenubooking}" z="65pIXsIaG9fSMhJEN15RweofZF4="/>
+    </page:show>
+</div>

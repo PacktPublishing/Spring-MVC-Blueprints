@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_packt_hotel_portal_jpa_data_HmsLogin" items="${hmslogins}" z="3ja2K2qAd719jSuSH+FLEpqc3oI=">
+        <table:table data="${hmslogins}" id="l_org_packt_hotel_portal_jpa_data_HmsLogin" path="/login" z="Qc2t9qpsu9x0IHRJGKRqT217O3M=">
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsLogin_hmsUserProfile" property="hmsUserProfile" z="Af4vdYyrRr2+7kL1adt56GuPMtk="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsLogin_username" property="username" z="g2vZ1pAb+h9HHLv/nm1YCzHviQg="/>
+            <table:column id="c_org_packt_hotel_portal_jpa_data_HmsLogin_password" property="password" z="3LIxjvFhFYNp4YTUIeFw+UGcvoo="/>
+        </table:table>
+    </page:list>
+</div>
