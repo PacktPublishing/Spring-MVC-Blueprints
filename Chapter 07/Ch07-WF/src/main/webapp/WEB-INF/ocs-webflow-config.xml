@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:webflow-config="http://www.springframework.org/schema/webflow-config"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/webflow-config http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.4.xsd">
+
+
+
+	<context:component-scan base-package="org.packt.online.cart.portal" />
+
+	<mvc:annotation-driven />
+
+	<mvc:default-servlet-handler />
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/images/**" location="/images/" />
+
+	<!-- Enables POJO @Controllers (like CartController) -->
+	
+
+
+	<!-- Maps a logical view name to a physical resource -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+
+	<!-- SPRING WEB FLOW STUFF -->
+
+	<!-- Web flow configs -->
+        
+        <webflow-config:flow-registry id="flowRegistry" flow-builder-services="flowBuilderServices">
+             <webflow-config:flow-location path="/WEB-INF/wf/cart-order-flow.xml" />
+        </webflow-config:flow-registry>
+ 
+        <webflow-config:flow-executor id="flowExecutor" flow-registry="flowRegistry" />
+ 
+ 
+        <!-- Enables FlowHandler URL mapping -->
+        <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerAdapter">
+             <property name="flowExecutor" ref="flowExecutor" />
+        </bean>
+ 
+        <webflow-config:flow-builder-services id="flowBuilderServices" view-factory-creator="mvcViewFactoryCreator"/>
+ 
+                <bean id="mvcViewFactoryCreator" class="org.springframework.webflow.mvc.builder.MvcViewFactoryCreator">
+                      <property name="viewResolvers" ref="viewResolver"/>
+                </bean>
+  
+        <!-- Maps request paths to flows in the flowRegistry; -->           
+        <bean class="org.springframework.webflow.mvc.servlet.FlowHandlerMapping">
+            <property name="flowRegistry" ref="flowRegistry"/>
+            <property name="order" value="0"/>
+        </bean>
+
+</beans>

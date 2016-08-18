@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="order" name="Cart Process">
+    <startEvent id="startevent1" name="Start"></startEvent>
+    <userTask id="orderProdTask" name="Order">
+    <documentation>
+        Write monthly financial report for publication to shareholders.
+      </documentation>
+		<potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>accountancy</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    
+    </userTask>
+    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="orderProdTask"></sequenceFlow>
+    <endEvent id="endevent1" name="End"></endEvent>
+    <userTask id="payOrder" name="payment">	  <documentation>
+        Verify monthly financial report composed by the accountancy department.
+        This financial report is going to be sent to all the company shareholders.  
+      </documentation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>management</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <sequenceFlow id="flow4" sourceRef="orderProdTask" targetRef="payOrder"></sequenceFlow>
+    <userTask id="issueReceipt" name="Receipt">	  <documentation>
+        Verify monthly financial report composed by the accountancy department.
+        This financial report is going to be sent to all the company shareholders.  
+      </documentation>
+      <potentialOwner>
+        <resourceAssignmentExpression>
+          <formalExpression>management</formalExpression>
+        </resourceAssignmentExpression>
+      </potentialOwner>
+    </userTask>
+    <sequenceFlow id="flow5" sourceRef="payOrder" targetRef="issueReceipt"></sequenceFlow>
+    <sequenceFlow id="flow6" sourceRef="issueReceipt" targetRef="endevent1"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_order">
+    <bpmndi:BPMNPlane bpmnElement="order" id="BPMNPlane_order">
+      <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="110.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="orderProdTask" id="BPMNShape_orderProdTask">
+        <omgdc:Bounds height="55.0" width="105.0" x="200.0" y="110.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="680.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="payOrder" id="BPMNShape_payOrder">
+        <omgdc:Bounds height="55.0" width="105.0" x="350.0" y="110.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="issueReceipt" id="BPMNShape_issueReceipt">
+        <omgdc:Bounds height="55.0" width="105.0" x="500.0" y="110.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="145.0" y="137.0"></omgdi:waypoint>
+        <omgdi:waypoint x="200.0" y="137.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="305.0" y="137.0"></omgdi:waypoint>
+        <omgdi:waypoint x="350.0" y="137.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="455.0" y="137.0"></omgdi:waypoint>
+        <omgdi:waypoint x="500.0" y="137.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="605.0" y="137.0"></omgdi:waypoint>
+        <omgdi:waypoint x="680.0" y="137.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

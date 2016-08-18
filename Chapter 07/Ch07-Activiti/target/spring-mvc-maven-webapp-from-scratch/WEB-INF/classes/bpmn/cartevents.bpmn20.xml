@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="shopping" name="Shopping Process">
+    <startEvent id="start" name="Start"></startEvent>
+    <userTask id="shopper" name="Shopper" >
+        <documentation>
+        OCS operation: Viewing Order Catalogs
+        </documentation>
+         <extensionElements>
+          <activiti:taskListener event="create" class="org.packt.online.cart.portal.activiti.ShopperTaskListener"></activiti:taskListener>
+        </extensionElements>
+		<potentialOwner>
+        	<resourceAssignmentExpression>
+         		 <formalExpression>shopper</formalExpression>
+        	</resourceAssignmentExpression>
+         </potentialOwner>
+    </userTask>
+    <sequenceFlow id="flow1" sourceRef="start" targetRef="shopper"></sequenceFlow>
+    <serviceTask id="chooseProduct" name="Choose Product" activiti:expression="${shopperService.printData(var)}"></serviceTask>
+    <sequenceFlow id="flow2" sourceRef="shopper" targetRef="chooseProduct"></sequenceFlow>
+    <userTask id="buyer" name="Buyer">
+        <documentation>
+          OCS operation: Billing Orders
+        </documentation>
+		<potentialOwner>
+        	<resourceAssignmentExpression>
+         		 <formalExpression>buyer</formalExpression>
+        	</resourceAssignmentExpression>
+         </potentialOwner>
+    </userTask>
+    <sequenceFlow id="flow3" sourceRef="chooseProduct" targetRef="buyer"></sequenceFlow>
+    <serviceTask id="orderProduct" name="Order Product" activiti:class="org.packt.online.cart.portal.activiti.ShopperDelegate"></serviceTask>
+    <sequenceFlow id="flow4" sourceRef="buyer" targetRef="orderProduct"></sequenceFlow>
+    <userTask id="payor" name="Payor">
+        <documentation>
+          OCS operation: Paying Ordered Products
+        </documentation>
+      
+		<potentialOwner>
+        	<resourceAssignmentExpression>
+         		 <formalExpression>payor</formalExpression>
+        	</resourceAssignmentExpression>
+         </potentialOwner>
+         
+    </userTask>
+    <sequenceFlow id="flow5" sourceRef="orderProduct" targetRef="payor"></sequenceFlow>
+    <serviceTask id="deliverProduct" name="Deliver Product" activiti:expression="${deliverService.printData(var)}"></serviceTask>
+    <sequenceFlow id="flow6" sourceRef="payor" targetRef="deliverProduct"></sequenceFlow>
+    <userTask id="shipper" name="Shipper">
+        <documentation>
+        OCS operation: Invoicing and Delivery of Products
+        </documentation>
+      
+		<potentialOwner>
+        	<resourceAssignmentExpression>
+         		 <formalExpression>shipper</formalExpression>
+        	</resourceAssignmentExpression>
+         </potentialOwner>
+         
+    </userTask> 
+    <sequenceFlow id="flow7" sourceRef="deliverProduct" targetRef="shipper"></sequenceFlow>
+    <endEvent id="end" name="End"></endEvent>
+    <sequenceFlow id="flow8" sourceRef="shipper" targetRef="end"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_shopping">
+    <bpmndi:BPMNPlane bpmnElement="shopping" id="BPMNPlane_shopping">
+      <bpmndi:BPMNShape bpmnElement="start" id="BPMNShape_startevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="50.0" y="130.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="shopper" id="BPMNShape_shopper">
+        <omgdc:Bounds height="55.0" width="105.0" x="130.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="chooseProduct" id="BPMNShape_chooseProduct">
+        <omgdc:Bounds height="55.0" width="105.0" x="280.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="buyer" id="BPMNShape_buyer">
+        <omgdc:Bounds height="55.0" width="105.0" x="430.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="orderProduct" id="BPMNShape_orderProduct">
+        <omgdc:Bounds height="55.0" width="105.0" x="580.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="deliverProduct" id="BPMNShape_deliverProduct">
+        <omgdc:Bounds height="55.0" width="105.0" x="580.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="payor" id="BPMNShape_payor">
+        <omgdc:Bounds height="55.0" width="105.0" x="730.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="shipper" id="BPMNShape_shipper">
+        <omgdc:Bounds height="55.0" width="105.0" x="730.0" y="120.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="end" id="BPMNShape_endevent1">
+        <omgdc:Bounds height="35.0" width="35.0" x="880.0" y="130.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
+        <omgdi:waypoint x="85.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="130.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
+        <omgdi:waypoint x="235.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="280.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow3" id="BPMNEdge_flow3">
+        <omgdi:waypoint x="385.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="430.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow4" id="BPMNEdge_flow4">
+        <omgdi:waypoint x="535.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="580.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow5" id="BPMNEdge_flow5">
+        <omgdi:waypoint x="685.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="730.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+       <bpmndi:BPMNEdge bpmnElement="flow6" id="BPMNEdge_flow6">
+        <omgdi:waypoint x="685.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="730.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="flow7" id="BPMNEdge_flow7">
+        <omgdi:waypoint x="835.0" y="147.0"></omgdi:waypoint>
+        <omgdi:waypoint x="880.0" y="147.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

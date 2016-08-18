@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webflow-project-description>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.7.0.201506251244-RELEASE]]></pluginVersion>
+	<configs>
+		<config>
+			<file>src/main/webapp/WEB-INF/wf/cart-order-flow.xml</file>
+			<name><![CDATA[cart-order-flow]]></name>
+		</config>
+	</configs>
+</webflow-project-description>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<var name="loginCredentials"
+		class="org.packt.online.cart.portal.LoginCredentials" />
+     <on-start>
+             <evaluate expression="loginController.createLoginForm()" result="flowScope.loginForm"/>
+     </on-start>
+	<!-- Display the login page -->
+	<view-state id="loginView" view="login" model="loginForm">
+		<transition on="order" to="orderView">
+		<evaluate expression="cartController.checkUser(flowScope.loginForm, messageContext)"/>
+		</transition>
+	</view-state>
+	<!-- Display the login page -->
+	<view-state id="orderView" view="order">
+		<transition on="billing" to="billingView" />
+	</view-state>
+		<!-- Display the login page -->
+	<view-state id="billingView" view="billing">
+		<transition on="shipping" to="shippingView" />
+	</view-state>
+	<!-- Display the login page -->
+	<view-state id="shippingView" view="shipping">
+		<transition on="payment" to="paymentView" />
+	</view-state>
+	<!-- Display the login page -->
+	<view-state id="paymentView" view="payment">
+		<transition on="confirmation" to="confirmationView" />
+	</view-state>
+	<!-- Display the login page -->
+	<view-state id="confirmationView" view="receipt">
+		<transition on="logout" to="logoutView" />
+	</view-state>
+
+	
+
+	<end-state id="logoutView" view="logout" />
+
+	<end-state id="displayLoginErrorView" view="display_login_error" />
+</flow>
