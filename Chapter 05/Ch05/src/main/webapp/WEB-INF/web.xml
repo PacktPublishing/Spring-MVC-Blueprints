@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>Ch05</display-name>
+	<!-- For additional context XML files -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+             /WEB-INF/jdbc.xml
+             /WEB-INF/dao_services.xml
+      </param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>cfs</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cfs</servlet-name>
+		<url-pattern>*.html</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>cfs</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<mime-mapping>
+		<extension>png</extension>
+		<mime-type>image/png</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jpg</extension>
+		<mime-type>image/jpeg</mime-type>
+	</mime-mapping>
+
+	<servlet>
+		<servlet-name>BotDetect Captcha</servlet-name>
+		<servlet-class>botdetect.web.http.CaptchaServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BotDetect Captcha</servlet-name>
+		<url-pattern>/botdetectcaptcha</url-pattern>
+	</servlet-mapping>
+<!--  
+	<servlet>
+		<servlet-name>kaptcha</servlet-name>
+		<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet
+		</servlet-class>
+		<init-param>
+			<param-name>kaptcha.border</param-name>
+			<param-value>no</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.border.color</param-name>
+			<param-value>105,179,90</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.textproducer.font.color</param-name>
+			<param-value>blue</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.image.width</param-name>
+			<param-value>250</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.image.height</param-name>
+			<param-value>90</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.textproducer.font.size</param-name>
+			<param-value>70</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.session.key</param-name>
+			<param-value>code</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.textproducer.char.length</param-name>
+			<param-value>7</param-value>
+		</init-param>
+		<init-param>
+			<param-name>kaptcha.textproducer.font.names</param-name>
+			<param-value>Arial, Arial, Microsoft Accor</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>kaptcha</servlet-name>
+		<url-pattern>/captcha/kaptcha.jpg</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>kaptcha</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	-->
+	<servlet>
+	   <servlet-name>SimpleCaptchaCustomServlet</servlet-name>
+	   <servlet-class>org.packt.feedback.portal.controller.SimpleCaptchaCustomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>SimpleCaptchaCustomServlet</servlet-name>
+	  <url-pattern>/captcha/simple.png</url-pattern>
+	</servlet-mapping>
+	
+	
+</web-app>

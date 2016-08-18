@@ -1,0 +1,320 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.packt.spring.codes.ch05</groupId>
+  <artifactId>Ch05</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>Ch05</name>
+   <properties>
+        <spring.version>4.1.2.RELEASE</spring.version>
+        <servlet.api.version>3.1.0</servlet.api.version>
+        <hibernate.version>4.3.7.Final</hibernate.version>
+  </properties>
+  <!-- dependencies -->
+  
+  <dependencies>
+   
+        <!-- Java Mail API -->
+        <dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.3</version>
+		</dependency>
+   
+        <!-- Spring 4.x Framework Core API -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+ 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+                
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-expression</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- AOP support -->
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <dependency>
+	     <groupId>aopalliance</groupId>
+	     <artifactId>aopalliance</artifactId>
+	     <version>1.0</version>
+        </dependency>
+             
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        
+        <!-- Hibernate ORM APIs -->
+         <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-c3p0</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        
+        <!-- Connection Pooling APis -->
+        <dependency>
+           <groupId>org.apache.commons</groupId>
+           <artifactId>commons-dbcp2</artifactId>
+           <version>2.1</version>
+         </dependency>
+         
+         <!-- MySQL JDBC Driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.36</version>
+        </dependency>
+     
+     <!-- JUnit Testing -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+        
+        <!-- JEE Core APIs -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
+           <groupId>javax.servlet.jsp</groupId>
+           <artifactId>javax.servlet.jsp-api</artifactId>
+           <version>2.3.1</version>
+           <scope>provided</scope>
+       </dependency>
+  
+       <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+		<!-- Logging APis -->
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.3</version>
+        </dependency>
+        
+        <dependency>
+           <groupId>junit</groupId>
+           <artifactId>junit</artifactId>
+           <version>4.11</version>
+           <scope>test</scope>
+        </dependency>
+    
+        <dependency>
+          <groupId>org.mockito</groupId>
+          <artifactId>mockito-all</artifactId>
+          <version>1.9.5</version>
+          <scope>test</scope>
+        </dependency>
+
+       <!-- Recaptcha API -->
+       <dependency>
+	         <groupId>net.tanesha.recaptcha4j</groupId>
+	         <artifactId>recaptcha4j</artifactId>
+	         <version>0.0.7</version>
+        </dependency>
+
+      <!-- SendGrid API -->
+       <dependency>
+	      <groupId>com.sendgrid</groupId>
+	      <artifactId>sendgrid-java</artifactId>
+	      <version>2.2.2</version>
+       </dependency>
+       <dependency>
+			<groupId>org.json</groupId>
+			<artifactId>org.json</artifactId>
+			<version>chargebee-1.0</version>
+		</dependency>
+
+       <!-- BotCaptcha API -->
+	  <dependency>
+          <groupId>com.captcha</groupId>
+          <artifactId>botdetect</artifactId>
+          <version>3.0.alpha2</version>
+      </dependency>
+      
+      <!-- JCaptcha API -->
+      <dependency>
+   		 <groupId>com.octo.captcha</groupId>
+   		 <artifactId>jcaptcha</artifactId>
+   		 <version>2.0-alpha-1</version>
+	 </dependency>
+
+	<dependency>
+  		  <groupId>com.octo.captcha</groupId>
+  		  <artifactId>jcaptcha-integration-simple-servlet</artifactId>
+  		  <version>2.0-alpha-1</version>
+   		 <exclusions>
+     		  <exclusion>
+       		     <artifactId>servlet-api</artifactId>
+       		     <groupId>javax.servlet</groupId>
+       		 </exclusion>
+   		 </exclusions>
+	</dependency>
+	<dependency>
+        <groupId>javax.media.jai</groupId>
+        <artifactId>com.springsource.javax.media.jai.core</artifactId>
+        <version>1.1.3</version>
+    </dependency>
+	<dependency>
+		<groupId>commons-collections</groupId>
+		<artifactId>commons-collections</artifactId>
+		<version>3.2.1</version>
+	</dependency>
+	 
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.12</version>
+	</dependency>
+	
+	<!-- SimpleCaptcha API -->
+	<dependency>
+		<groupId>com.liferay</groupId>
+		<artifactId>nl.captcha.simplecaptcha</artifactId>
+		<version>1.1.1</version>
+	</dependency>
+	
+	<!-- Google Kaptcha API -->
+ 	<dependency>
+            <groupId>com.google.code</groupId>
+            <artifactId>kaptcha</artifactId>
+            <version>2.3.2</version>
+    </dependency>
+	
+	
+
+  </dependencies>
+ <repositories>
+    <!-- Repository for BotCaptcha -->
+    <repository>
+ 		 <id>captcha</id>
+ 		 <name>BotDetect Captcha Repository</name>
+ 		 <url>https://git.captcha.com/maven.git/blob_plain/HEAD:/</url>
+	</repository>
+	
+	<!-- Repository for JCaptcha -->
+	<repository>
+        <id>sourceforge-releases</id>
+        <name>Sourceforge Releases</name>
+        <url>https://oss.sonatype.org/content/repositories/sourceforge-releases</url>
+    </repository>
+     <repository>
+        <id>com.springsource.repository.bundles.external</id>
+        <name>SpringSource Enterprise Bundle Repository - External Bundle Releases</name>
+        <url>http://repository.springsource.com/maven/bundles/external</url>
+    </repository>
+    <!-- Repository for Kaptcha -->
+    <repository>
+			<id>google-maven-snapshot-repository</id>
+			<name>Google Maven Snapshot Repository</name>
+			<url>https://m2repos.googlecode.com/svn/nexus</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+	</repository>
+ </repositories>
+ 
+  <build>
+        <finalName>spring-mvc-maven-webapp-from-scratch</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                     <url>http://localhost:8080/manager/text</url>
+                     <path>/ch05</path>
+                     <username>admin</username>
+                     <password>admin</password>
+                </configuration>
+            </plugin>
+         
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+           <!--  
+            <plugin>
+               <groupId>org.codehaus.mojo</groupId>
+               <artifactId>tomcat-maven-plugin</artifactId>
+               <version>1.1</version>
+               <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>TomcatServer</server>
+                    <path>/ch05</path>
+               </configuration>
+            </plugin>
+            -->
+        </plugins>
+   </build>
+</project>

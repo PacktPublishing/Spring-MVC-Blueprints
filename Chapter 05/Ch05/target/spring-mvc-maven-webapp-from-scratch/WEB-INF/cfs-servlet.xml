@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:oxm="http://www.springframework.org/schema/oxm" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+
+	<import resource="jdbc.xml" />
+	<import resource="dao_services.xml" />
+	<context:component-scan base-package="org.packt.feedback.portal" />
+
+	<mvc:annotation-driven />
+	<mvc:default-servlet-handler />
+	<mvc:resources mapping="/css/**" location="/css/" />
+	<mvc:resources mapping="/js/**" location="/js/" />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename">
+			<value>config.errors</value>
+		</property>
+	</bean>
+
+
+	<!-- View Resolver -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+		<property name="basename">
+			<value>config.views</value>
+		</property>
+	</bean>
+
+	<bean id="recaptcha" class="net.tanesha.recaptcha.ReCaptchaImpl">
+		<property name="privateKey" value="6Lf2rwsTAAAAACsFdaTempAjILAuK3GhMuZe3ZDK"></property>
+	</bean>
+
+
+	<bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+		<property name="config">
+			<bean class="com.google.code.kaptcha.util.Config">
+				<constructor-arg>
+					<props>
+						<prop key="kaptcha.border">no</prop>
+						<prop key="kaptcha.border.color">105,179,90</prop>
+						<prop key="kaptcha.textproducer.font.color">red</prop>
+						<prop key="kaptcha.image.width">250</prop>
+						<prop key="kaptcha.textproducer.font.size">90</prop>
+						<prop key="kaptcha.image.height">90</prop>
+						<prop key="kaptcha.session.key">code</prop>
+						<prop key="kaptcha.textproducer.char.length">4</prop>
+						<prop key="kaptcha.textproducer.font.names">
+							Arial, Arial, Microsoft Accor
+						</prop>
+					</props>
+				</constructor-arg>
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="captchaBean" class="nl.captcha.CaptchaBean" scope="session" >
+		<constructor-arg index="0">
+			<value>200</value>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<value>50</value>
+		</constructor-arg>
+		<property name="addBorder">
+			<value>true</value>
+		</property>
+		<property name="txtProd">
+			<ref bean="textProducer"></ref>
+		</property>
+		<property name="noiseProd">
+			<ref bean="noiseProducer"></ref>
+		</property>
+		<property name="gimpy">
+			<ref bean="gimpyProducer"></ref>
+		</property>
+		<aop:scoped-proxy />
+	</bean>
+	<bean id="textProducer" class="nl.captcha.text.producer.DefaultTextProducer" />
+	<bean id="noiseProducer" class="nl.captcha.noise.CurvedLineNoiseProducer" />
+	<bean id="gimpyProducer" class="nl.captcha.gimpy.FishEyeGimpyRenderer" />
+	
+	 
+
+	<bean id="fastHashMapCaptchaStore"
+		class="com.octo.captcha.service.captchastore.FastHashMapCaptchaStore" />
+	<bean id="cfsCaptchaEngine" class="org.packt.feedback.portal.jcaptcha.CFSJCaptchaEngine" />
+	<bean id="imageCaptchaService"
+		class="com.octo.captcha.service.multitype.GenericManageableCaptchaService">
+		<constructor-arg type="com.octo.captcha.service.captchastore.CaptchaStore"
+			index="0">
+			<ref bean="fastHashMapCaptchaStore" />
+		</constructor-arg>
+		<constructor-arg type="com.octo.captcha.engine.CaptchaEngine"
+			index="1">
+			<ref bean="cfsCaptchaEngine" />
+		</constructor-arg>
+		<constructor-arg index="2">
+			<value>180</value>
+		</constructor-arg>
+		<constructor-arg index="3">
+			<value>100000</value>
+		</constructor-arg>
+		<constructor-arg index="4">
+			<value>75000</value>
+		</constructor-arg>
+	</bean>
+
+	<bean id="deployProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location">
+			<value>classpath:config/sendgrid.properties</value>
+		</property>
+	</bean>
+	<context:property-placeholder
+		properties-ref="deployProperties" />
+</beans>
+
+

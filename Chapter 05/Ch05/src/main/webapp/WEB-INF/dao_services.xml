@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+
+    <import resource="jdbc.xml"/>
+
+     
+     <bean id="topicDao" class="org.packt.feedback.portal.dao.impl.TopicDaoImpl">
+              <property name="sessionFactory" ref="sessionFactory"/>
+     </bean>
+     <bean id="topicService" class="org.packt.feedback.portal.service.impl.TopicServiceImpl"/>
+     
+     <bean id="feedbackDao" class="org.packt.feedback.portal.dao.impl.FeedbackDaoImpl">
+              <property name="sessionFactory" ref="sessionFactory"/>
+     </bean>
+     <bean id="feedbackService" class="org.packt.feedback.portal.service.impl.FeedbackServiceImpl"/>
+     
+      <bean id="emailService" class="org.packt.feedback.portal.service.impl.EmailServiceImpl"/>
+      
+    	 
+    
+
+</beans>
