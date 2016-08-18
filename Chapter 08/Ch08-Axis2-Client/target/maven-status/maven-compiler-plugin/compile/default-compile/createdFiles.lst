@@ -1,0 +1,17 @@
+org\packt\erp\modules\Axis2SpringServiceStub.class
+org\packt\erp\modules\Axis2SpringServiceStub$GetMessageResponse.class
+org\packt\erp\modules\Axis2SpringServiceStub$2.class
+org\packt\erp\modules\Axis2SpringServiceCallbackHandler.class
+org\packt\erp\modules\Axis2SpringServiceStub$GetAllPersons$Factory.class
+org\packt\erp\modules\Axis2SpringServiceStub$ExtensionMapper.class
+org\packt\erp\modules\Axis2SpringServiceStub$1.class
+org\packt\erp\modules\Axis2SpringServiceStub$Person$Factory.class
+org\packt\erp\modules\Axis2SpringServiceStub$GetMessage$Factory.class
+org\packt\erp\modules\Axis2Controller.class
+org\packt\erp\modules\Axis2SpringServiceStub$Person.class
+org\packt\erp\modules\Axis2SpringServiceStub$GetAllPersons.class
+org\packt\erp\modules\Axis2SpringServiceStub$GetMessageResponse$Factory.class
+org\packt\erp\modules\Person.class
+org\packt\erp\modules\Axis2SpringServiceStub$GetAllPersonsResponse.class
+org\packt\erp\modules\Axis2SpringServiceStub$GetAllPersonsResponse$Factory.class
+org\packt\erp\modules\Axis2SpringServiceStub$GetMessage.class

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:facebook="http://www.springframework.org/schema/social/facebook"
+	xmlns:twitter="http://www.springframework.org/schema/social/twitter"
+	xmlns:social="http://www.springframework.org/schema/social"
+	xmlns:linkedin="http://www.springframework.org/schema/social/linkedin"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/social/facebook http://www.springframework.org/schema/social/spring-social-facebook.xsd 
+		http://www.springframework.org/schema/social/twitter http://www.springframework.org/schema/social/spring-social-twitter.xsd 
+		http://www.springframework.org/schema/social http://www.springframework.org/schema/social/spring-social.xsd
+		http://www.springframework.org/schema/social/linkedin http://www.springframework.org/schema/social/spring-social-linkedin.xsd">
+
+	<import resource="jdbc.xml" />
+	<context:component-scan base-package="org.packt.erp.modules" />
+	<context:property-placeholder location="classpath:/config/socials.properties" />
+	<mvc:annotation-driven />
+	
+	<aop:aspectj-autoproxy proxy-target-class="true"/>
+
+    <!-- Enable this to implement Spring Social with Spring Security -->
+    <!-- Needs to implement a POJO Data model UserDetailAuhentication check http://projects.spring.io/spring-social/ -->
+     <!--  
+	<bean id="userIdSource"
+		class="org.springframework.social.security.AuthenticationNameUserIdSource" />
+
+	<bean id="usersConnectionRepository"
+		class="org.springframework.social.connect.jdbc.JdbcUsersConnectionRepository">
+		<constructor-arg ref="dataSourceAdmin" />
+		<constructor-arg ref="connectionFactoryLocator" />
+		<constructor-arg ref="textEncryptor" />
+	</bean>
+
+	<bean id="textEncryptor" class="org.springframework.security.crypto.encrypt.Encryptors"
+		factory-method="noOpText" />
+
+	<bean id="connectionRepository" factory-method="createConnectionRepository"
+		factory-bean="usersConnectionRepository" scope="request">
+		<constructor-arg value="${request.userPrincipal.name}" />
+		<aop:scoped-proxy proxy-target-class="false" />
+	</bean>
+
+	<bean id="connectionFactoryLocator"
+		class="org.springframework.social.connect.support.ConnectionFactoryRegistry">
+		<property name="connectionFactories">
+			<list>
+				<bean
+					class="org.springframework.social.twitter.connect.TwitterConnectionFactory">
+					<constructor-arg value="${erp.twitter.appId}" />
+					<constructor-arg value="${erp.twitter.appSecret}" />
+				</bean>
+				<bean
+					class="org.springframework.social.facebook.connect.FacebookConnectionFactory">
+					<constructor-arg value="${erp.facebook.appId}" />
+					<constructor-arg value="${erp.facebook.appSecret}" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="connectController" class="org.springframework.social.connect.web.ConnectController">
+        <constructor-arg index="0" ref="connectionFactoryLocator"/>
+        <constructor-arg index="1" ref="connectionRepository"/>
+        <property name="applicationUrl" value="http://localhost:8080/ch08/" />
+    </bean>
+    -->
+    
+</beans>

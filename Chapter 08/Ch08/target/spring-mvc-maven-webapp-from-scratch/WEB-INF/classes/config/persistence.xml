@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="erpPersistencyAdmin"
+		transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>jdbc/erpAdmin</jta-data-source>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="connection.release_mode" value="after_transaction" />
+			<property name="format_sql" value="true" />
+			<property name="cache.use_second_level_cache" value="true" />
+			<property name="cache.use_query_cache" value="true" />
+			<property name="generate_statistics" value="true" />
+			<property name="org.hibernate.cache.ehcache.configurationResourceName"
+				value="/ehcache.xml" />
+			<property name="hibernate.cache.region.factory_class"
+				value="org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory" />
+				<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.BTMTransactionManagerLookup" />
+		</properties>
+	</persistence-unit>
+  
+	<persistence-unit name="erpPersistencySales"
+		transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>jdbc/erpSales</jta-data-source>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="connection.release_mode" value="after_transaction" />
+			<property name="format_sql" value="true" />
+			<property name="cache.use_second_level_cache" value="true" />
+			<property name="cache.use_query_cache" value="true" />
+			<property name="generate_statistics" value="true" />
+			<property name="org.hibernate.cache.ehcache.configurationResourceName"
+				value="/ehcache.xml" />
+			<property name="hibernate.cache.region.factory_class"
+				value="org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory" />
+				<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.BTMTransactionManagerLookup" />
+		</properties>
+	</persistence-unit>
+	
+	<persistence-unit name="erpPersistencyAR"
+		transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>jdbc/erpAR</jta-data-source>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="connection.release_mode" value="after_transaction" />
+			<property name="format_sql" value="true" />
+			<property name="cache.use_second_level_cache" value="true" />
+			<property name="cache.use_query_cache" value="true" />
+			<property name="generate_statistics" value="true" />
+			<property name="org.hibernate.cache.ehcache.configurationResourceName"
+				value="/ehcache.xml" />
+			<property name="hibernate.cache.region.factory_class"
+				value="org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory" />
+				<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.BTMTransactionManagerLookup" />
+		</properties>
+	</persistence-unit>
+	
+	<persistence-unit name="erpPersistencyPurchasing"
+		transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>jdbc/erpPurchasing</jta-data-source>
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="connection.release_mode" value="after_transaction" />
+			<property name="format_sql" value="true" />
+			<property name="cache.use_second_level_cache" value="true" />
+			<property name="cache.use_query_cache" value="true" />
+			<property name="generate_statistics" value="true" />
+			<property name="org.hibernate.cache.ehcache.configurationResourceName"
+				value="/ehcache.xml" />
+			<property name="hibernate.cache.region.factory_class"
+				value="org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory" />
+				<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.BTMTransactionManagerLookup" />
+		</properties>
+	</persistence-unit>
+		<persistence-unit name="erpPersistencyInventory"
+		transaction-type="JTA">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<jta-data-source>jdbc/erpInventory</jta-data-source>
+	   <exclude-unlisted-classes>false</exclude-unlisted-classes>
+		<properties>
+		
+			<property name="connection.release_mode" value="after_statement" />
+				  <property name="hibernate.jndi.class" value="bitronix.tm.jndi.BitronixInitialContextFactory"/>
+				<property name="hibernate.transaction.manager_lookup_class" value="org.hibernate.transaction.BTMTransactionManagerLookup" />
+			
+
+				 <property name="hibernate.cache.use_query_cache" value="false" />
+		 <property name="hibernate.cache.use_second_level_cache" value="false" />
+		  <property name="hibernate.connection.isolation" value="2" />
+				  
+		</properties>
+	</persistence-unit>
+	
+	
+</persistence>

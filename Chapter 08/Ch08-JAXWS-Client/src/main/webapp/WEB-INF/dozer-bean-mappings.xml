@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping map-id="catalog">
+		<class-a>org.packt.erp.modules.model.data.Catalog</class-a>
+		<class-b>org.packt.erp.modules.service.impl.Catalog</class-b>
+		<field>
+			<a>id</a>
+			<b>id</b>
+		</field>
+		<field>
+			<a>materialType</a>
+			<b>materialType</b>
+		</field>
+		<field>
+			<a>uom</a>
+			<b>uom</b>
+		</field>
+		<field>
+			<a>name</a>
+			<b>name</b>
+		</field>
+		<field>
+			<a>costPrice</a>
+			<b>costPrice</b>
+		</field>
+		<field>
+			<a>wholesalePrice</a>
+			<b>wholesalePrice</b>
+		</field>
+		<field>
+			<a>retailPrice</a>
+			<b>retailPrice</b>
+		</field>
+		<field>
+			<a>description</a>
+			<b>description</b>
+		</field>
+		<field>
+			<a>tags</a>
+			<b>tags</b>
+		</field>
+		<field>
+			<a>stock</a>
+			<b>stock</b>
+		</field>
+		<field>
+			<a>supplierId</a>
+			<b>supplierId</b>
+		</field>
+	</mapping>
+</mappings>

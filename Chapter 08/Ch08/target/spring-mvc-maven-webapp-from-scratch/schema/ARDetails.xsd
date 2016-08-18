@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://invprod.packt.erp.modules.org"  
+ targetNamespace="http://invprod.packt.erp.modules.org" elementFormDefault="qualified"  
+ attributeFormDefault="unqualified">
+
+  <xs:complexType name="Invoice">
+    <xs:sequence>
+      <xs:element name="catId" type="xs:string" minOccurs="0"/>
+      <xs:element name="cid" type="xs:string" minOccurs="0"/>
+      <xs:element name="custId" type="xs:string" minOccurs="0"/>
+      <xs:element name="date" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="id" type="xs:int" minOccurs="0"/>
+      <xs:element name="invoicedProducts" type="InvoicedProducts" minOccurs="0"/>
+      <xs:element name="paymentAp" type="PaymentAp" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="InvoicedProducts">
+    <xs:sequence>
+      <xs:element name="catId" type="xs:int"/>
+      <xs:element name="id" type="xs:int" minOccurs="0"/>
+      <xs:element name="invId" type="xs:int"/>
+      <xs:element name="invoice" type="Invoice" minOccurs="0"/>
+      <xs:element name="qty" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PaymentAp">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" minOccurs="0"/>
+      <xs:element name="invoices" type="Invoice" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="term" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

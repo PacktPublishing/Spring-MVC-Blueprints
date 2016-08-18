@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rabbit="http://www.springframework.org/schema/rabbit" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+http://www.springframework.org/schema/rabbit http://www.springframework.org/schema/rabbit/spring-rabbit-1.1.xsd">
+    
+    <rabbit:connection-factory id="connectionFactory" host="localhost" username="guest" password="guest" />
+    <rabbit:admin connection-factory="connectionFactory" />
+   
+    <rabbit:queue id="packt_amqp_queue" />
+   
+    <rabbit:topic-exchange id="myExchange" name="ERP-EXCHANGE">
+        <rabbit:bindings>
+            <rabbit:binding queue="packt_amqp_queue" pattern="my.#.*"></rabbit:binding>
+        </rabbit:bindings>
+    </rabbit:topic-exchange>
+  
+    <bean id="aListener" class="org.packt.erp.modules.jms.POListener" />
+    
+   
+    <rabbit:listener-container id="myListenerContainer" connection-factory="connectionFactory">
+        <rabbit:listener ref="aListener" queues="packt_amqp_queue" /></rabbit:listener-container>
+</beans>

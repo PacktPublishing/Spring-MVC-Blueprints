@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceGroup>
+	<service name="axis2SpringService">
+		<description>axis2 service</description>
+		<parameter name="ServiceClass" locked="true">org.packt.erp.modules.AxisService
+		</parameter>
+		<parameter name="ServiceObjectSupplier">
+			org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier
+		</parameter>
+		<parameter name="SpringBeanName">myServiceClass</parameter>
+
+
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+		</messageReceivers>
+	</service>
+	<service name="axis2PersonService">
+		<description>axis2 service</description>
+		<parameter name="ServiceClass" locked="true">org.packt.erp.modules.PersonService
+		</parameter>
+		<parameter name="ServiceObjectSupplier">
+			org.apache.axis2.extensions.spring.receivers.SpringAppContextAwareObjectSupplier
+		</parameter>
+		<parameter name="SpringBeanName">personServiceClass</parameter>
+
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+		</messageReceivers>
+	</service>
+</serviceGroup>

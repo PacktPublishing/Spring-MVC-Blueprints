@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns="http://invprod.packt.erp.modules.org/getInvoicedProducts"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:invprod="http://invprod.packt.erp.modules.org"  
+ targetNamespace="http://invprod.packt.erp.modules.org/getInvoicedProducts"   elementFormDefault="qualified">  
+ <xs:import namespace="http://invprod.packt.erp.modules.org"  schemaLocation="ARDetails.xsd" />  
+
+      <xs:element name="InvoiceProductsResponse">  
+           <xs:complexType>  
+                <xs:sequence>  
+                     <xs:element name="invoicedProducts" type="invprod:InvoicedProducts" maxOccurs="unbounded"/>  
+                </xs:sequence>  
+           </xs:complexType>  
+      </xs:element>  
+
+</xs:schema>

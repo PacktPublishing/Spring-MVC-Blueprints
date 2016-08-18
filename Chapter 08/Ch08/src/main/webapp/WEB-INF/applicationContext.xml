@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:lang="http://www.springframework.org/schema/lang" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:ws="http://jax-ws.dev.java.net/spring/core"
+	xmlns:wss="http://jax-ws.dev.java.net/spring/servlet" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:cache="http://www.springframework.org/schema/cache"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-4.1.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://jax-ws.dev.java.net/spring/core   http://jax-ws.java.net/spring/core.xsd
+        http://jax-ws.dev.java.net/spring/servlet  http://jax-ws.java.net/spring/servlet.xsd
+        http://cxf.apache.org/jaxrs  http://cxf.apache.org/schemas/jaxrs.xsd
+        http://cxf.apache.org/jaxws   http://cxf.apache.org/schemas/jaxws.xsd">
+        
+        
+	<context:annotation-config />
+	<context:component-scan base-package="org.packt.erp.modules" />
+	<mvc:annotation-driven />
+
+    <!-- CXF-JAX  -->
+	<bean id="loginService" class="org.packt.erp.modules.service.impl.LoginServiceImpl" />
+	<jaxws:endpoint id="loginServiceWS" implementor="#loginService"
+		address="/loginServiceWS">
+	</jaxws:endpoint>
+
+     <!-- CXF-RS -->
+	<bean id="restInventoryService"
+		class="org.packt.erp.modules.service.impl.InventoryServiceRestImpl" />
+	<jaxrs:server id="restInvService" address="/restInvService">
+		<jaxrs:providers>
+			<bean class="org.apache.cxf.jaxrs.provider.JAXBElementProvider" />
+			<bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+		</jaxrs:providers>
+		<jaxrs:serviceBeans>
+			<ref bean="restInventoryService" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+	</jaxrs:server>
+
+    <!-- JAX-WS RPC-based -->
+	<wss:binding url="/sales-inventory-dao">
+		<wss:service>
+			<ws:service bean="#salesInventoryServiceWS" />
+		</wss:service>
+	</wss:binding>
+	<bean id="salesInventoryServiceWS"
+		class="org.packt.erp.modules.service.impl.SalesInventoryServiceImpl" />
+
+	<wss:binding url="/inventory-dao">
+		<wss:service>
+			<ws:service bean="#inventoryServiceWS" />
+		</wss:service>
+	</wss:binding>
+	<bean id="inventoryServiceWS" class="org.packt.erp.modules.service.impl.InventoryServiceImpl" />
+
+	<!-- RMI -->
+	<bean id="customerService" class="org.packt.erp.modules.service.impl.CustomerServiceImpl" />
+	<bean class="org.springframework.remoting.rmi.RmiServiceExporter">
+		<property name="service" ref="customerService"></property>
+		<property name="serviceInterface"
+			value="org.packt.erp.modules.service.CustomerService"></property>
+		<property name="serviceName" value="CustomerService"></property>
+		<property name="replaceExistingBinding" value="true"></property>
+		<property name="registryPort" value="1099"></property>
+	</bean>
+
+
+</beans>

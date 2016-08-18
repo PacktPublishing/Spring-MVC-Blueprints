@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:oxm="http://www.springframework.org/schema/oxm"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-4.1.xsd">
+		
+	<import resource="jdbc.xml"/>
+	
+	<bean id="inventoryDao" class="org.packt.erp.modules.dao.impl.InventoryDaoImpl"/>
+	<bean id="salesDao" class="org.packt.erp.modules.dao.impl.SalesInventoryDaoImpl"/>
+	<bean id="loginDao" class="org.packt.erp.modules.dao.impl.LoginDaoImpl"/>
+	<bean id="accountReceivableDao" class="org.packt.erp.modules.dao.impl.AccountReceivableDaoImpl"/>
+	
+	
+	<bean id="inventoryService" class="org.packt.erp.modules.service.impl.InventoryServiceImpl"/>
+		<bean id="invoiceAddProductService" class="org.packt.erp.modules.service.impl.InvoiceAddProductImpl"/>
+	<bean id="personDao" class="org.packt.erp.modules.dao.impl.SalesPersonDaoImpl"/>
+		<bean id="customerDao" class="org.packt.erp.modules.dao.impl.SalesCustomerDaoImpl"/>
+			<bean id="supplierDao" class="org.packt.erp.modules.dao.impl.SalesSupplierDaoImpl"/>
+			
+			<bean id="accountReceivableService" class="org.packt.erp.modules.service.impl.AccountReceivableServiceImpl"/>
+    </beans>
+    
+    

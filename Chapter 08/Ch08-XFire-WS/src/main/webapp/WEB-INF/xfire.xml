@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+       
+    <beans>
+	
+ <import resource="classpath:org/codehaus/xfire/spring/xfire.xml" />   
+		 <bean id="myService" class="org.codehaus.xfire.spring.remoting.XFireExporter" lazy-init="false" abstract="true">    
+		  <property name="serviceFactory" ref="xfire.serviceFactory" />    
+		  <property name="xfire" ref="xfire" />   
+		 </bean>   
+		 <bean id="sampleService" class="org.packt.erp.modules.XfireServiceImpl">  
+		 </bean>   
+		 <bean id="myClassService" parent="myService">    
+		  <property name="serviceBean" ref="sampleService" />    
+		  <property name="serviceClass" value="org.packt.erp.modules.XfireService" />   
+		 </bean> 
+    
+	
+</beans>
