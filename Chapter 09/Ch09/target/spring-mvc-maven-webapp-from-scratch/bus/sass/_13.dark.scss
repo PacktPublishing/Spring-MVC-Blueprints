@@ -1,0 +1,1236 @@
+#page-wrap.dark {
+    background-color: #1E1E1F;
+    textarea,
+    input[type="search"], 
+    input[type="text"], 
+    input[type="url"], 
+    input[type="number"], 
+    input[type="password"], 
+    input[type="email"], 
+    input[type="file"]
+    select {
+        background-color: #262626;
+        border-color: #606060;
+        color: #a6a6a6;
+    }
+    .awe-btn {
+        background-color: #444;
+        border-color: #444;
+        color: #fff;
+        &.awe-btn-style2 {
+            border: 0;
+            background-color: #ddd;
+            color: #666;
+        }
+        &.awe-btn-style3 {
+            border: 0;
+            background-color: $color;
+            color: #fff;
+            &:focus,
+            &:hover {
+                background-color: #575757;
+                color: #fff;
+            }
+        }
+        &:focus,
+        &:hover {
+            background-color: $color;
+            border-color: $color;
+            color: #111;
+        }
+    }
+    #header-page {
+        background-color: $color;
+        .header-page__inner {
+            background-color: $color;
+        }
+    }
+    .minicart-wrap {
+        .toggle-minicart {
+            color: #111;
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+    .search-box {
+        .searchtoggle {
+            color: #111;
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+    .preloader {
+        background-color: #111;
+    }
+    .awe-navigation {
+        .menu-list {
+            li {
+                a {
+                    color: #000;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                }
+                &:hover,
+                &.current-menu-parent,
+                &.current-menu-item {
+                    > a {
+                        color: #fff;
+                    }
+                }
+                .sub-menu {
+                    li {
+                        &:hover,
+                        &.current-menu-parent,
+                        &.current-menu-item {
+                            > a {
+                                color: $color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .awe-navigation-responsive {
+        background-color: #111;
+        border: 1px solid rgba(255,255,255,.2);
+        border-right: 0;
+        border-bottom: 0;
+        .menu-list {
+            li {
+                border-bottom: 1px solid rgba(255,255,255,.2);
+                &:first-child {
+                    border-top: 1px solid rgba(255,255,255,.2);
+                }
+                a {
+                    color: #8F9AB3;
+                }
+                &.current-menu-parent,
+                &.current-menu-item {
+                    > a {
+                        color: #fff;
+                    }
+                }
+                .sub-menu {
+                    background-color: #111;
+                }
+                .submenu-toggle {
+                    border-left: 1px solid rgba(255,255,255,.2); 
+                }
+            }
+        }
+    }
+    .heading-content {
+        h2 {
+            color: $color;
+        }
+    }
+    .tabs {
+        .ui-tabs-nav {
+            &:after {
+                border-bottom-color: #333;
+            }
+            li {
+                .ui-tabs-anchor {
+                    color: #666;
+                }
+                &.ui-tabs-active {
+                    .ui-tabs-anchor {
+                        color: $color;
+                    }
+                }
+            }
+        }
+    }
+    .accordion .ui-accordion-header {
+        background-color: #333;
+        color: $color;
+    }
+    .accordion .ui-state-active .ui-icon,
+    .accordion .ui-widget-content .ui-state-active .ui-icon {
+        border-top-color: $color;
+    }
+    .accordion .ui-widget-content {
+        color: #A5A5A5;
+        h1, h2, h3, h4, h5, h6 {
+            color: #fff;
+        }
+    }
+    .destination-grid-content .section-title h3 {
+        color: #fff;
+    }
+    .destination-grid-content .more-destination a {
+        color: #111;
+        font-weight: 600;
+    }
+    .awe-search-tabs {
+        .ui-tabs-nav {
+            &:before {
+                background-color: $color;
+            }
+        }
+    }
+    .accordion {
+        h1, h2, h3, h4, h5, h6 {
+            color: #fff;
+        }
+    }
+    .awe-search-tabs {
+        .ui-tabs-nav {
+            li {
+                .ui-tabs-anchor {
+                    color: #333;
+                    border-left: 1px solid rgba(0,0,0,.2);
+                }
+                &:last-child {
+                    .ui-tabs-anchor {
+                        border-right: 1px solid rgba(0,0,0,.2) !important;
+                    }
+                }
+            }
+        }
+        .ui-tabs-nav {
+            li.ui-tabs-active {
+                .ui-tabs-anchor {
+                    background-color: #333;
+                    border-color: #333;
+                    color: #fff;
+                }
+                + li {
+                    .ui-tabs-anchor {
+                        border-color: #333;
+                    }
+                }
+            }
+        }
+
+    }
+    .awe-search-tabs__content {
+        background: url("../images/pattern2.png");
+        background-repeat: repeat;
+        background-color: transparent;
+        .ui-tabs-panel {
+            h2 {
+                color: #D4D4D4;
+            }
+            .form-elements {
+                label {
+                    color: $color;
+                }
+                input,
+                select {
+                    background-color: #444;
+                    border-color: #606060;
+                    color: #A6A6A6;
+                }
+                .fa,
+                .awe-icon {
+                    background-color: #444;
+                }
+            }
+        }
+    }
+    .awe-search-tabs-2 .awe-search-tabs__content {
+        background-image: none;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .destination-content {
+        .section-title {
+            h3 {
+                color: #fff;
+            }
+        }
+    }
+    .awe-masonry {
+        .awe-masonry__item {
+            > a {
+                &:after {
+                    border-color: #1E1E1F;
+                }
+            }
+        }
+    }
+    .sale-flights-tabs__table {
+        tr {
+            background-color: #262626;
+            .sale-flights-tabs__item-flight {
+                &:before,
+                &:after {
+                    background-color: #262626;
+                }
+                .image-wrap {
+                    border: 0;
+                }
+            }
+            .sale-flights-tabs__item-depart,
+            .sale-flights-tabs__item-arrive,
+            .sale-flights-tabs__item-duration {
+                h4 {
+                    color: #FDFDFD;
+                }
+            }
+            .sale-flights-tabs__item-choose {
+                &:after {
+                    border-left-color: #444;
+                }
+            }
+        }
+    }
+    .widget_has_radio_checkbox_text .widget_content label .awe-icon-check {
+        border-color: #444;
+    }
+    .awe-services__list {
+        li {
+            color: $color;
+            border-bottom-color: #666;
+            .awe-icon-check {
+                border-color: #444;
+            }
+            .awe-icon-arrow-right {
+                color: #444;
+            }
+            &:hover {
+                .awe-icon-check {
+                    border-color: #262626;
+                    background-color: #262626;
+                    color: $color;
+                }
+                .awe-icon-arrow-right {
+                    color: $color;
+                }
+            }
+        }
+    }
+    #footer-page {
+        position: relative;
+        z-index: 9;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 0;
+            top: 0;
+            left: 0;
+            border-top: 2px solid #262626;
+            z-index: -1;
+        }
+    }
+    .checkout-page__top {
+        .title {
+            h1 {
+                color: $color;
+            }
+        }
+        .phone {
+            color: #A5A5A5;
+        }
+    }
+    .checkout-page__sidebar {
+        ul {
+            li {
+                &:before {
+                    background-color: #262626;
+                }
+                a {
+                    background-color: #333;
+                }
+                &.current {
+                    &:before {
+                        border-color: transparent;
+                    }
+                    a {
+                        background-color: $color;
+                        color: #111;
+                    }
+                }
+            }
+        }
+    }
+    .checkout-page__content {
+        .yourcart-content,
+        .customer-content,
+        .complete-content {
+            background-color: #333;
+        }
+        .content-title {
+            h2 {
+                color: #fff;
+            }
+        }
+    }
+    .cart-content {
+        .cart-table {
+            tbody {
+                td {
+                    .quantity {
+                        .qty {
+                            background-color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cart-footer {
+        .cart-subtotal {
+            .coupon-code {
+                input#coupon {
+                    background-color: #262626;
+                    border-color: #606060;
+                }
+            }
+        }
+        .shipping-handling {
+            .check-shipping-rate {
+                h4 {
+                    color: #fff;
+                }
+                .form-row {
+                    input {
+                        background-color: #262626;
+                        border-color: #606060;
+                    }
+                    &.form-country {
+                        select {
+                            background-color: #262626;
+                            border-color: #606060;
+                        }
+                        .awe-select-wrapper .fa {
+                            background-color: #262626;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .woocommerce-error,
+    .woocommerce-info,
+    .woocommerce-message {
+        background-color: #444;
+        color: #fff;
+    }
+
+    .checkout-page__content {
+        .woocommerce-shipping-fields .shipping_address .form-row input,
+        .woocommerce-billing-fields .form-row input {
+            background-color: #262626;
+            border-color: #606060;
+            color: #a6a6a6;
+        }
+        .coupon .form-row.form-row-first input,
+        .woocommerce-shipping-fields .shipping_address #order_comments_field textarea,
+        .woocommerce-billing-fields #billing_country_field .country_select a,
+        .woocommerce-shipping-fields .shipping_address #billing_country_field .country_select a {
+            background-color: #262626;
+            border-color: #606060;
+            color: #a6a6a6;
+        }
+        .woocommerce-billing-fields h3 {
+            border-color: #666;
+            color: #fff;
+        }
+    }
+    .checkout-page__content .woocommerce-shipping-fields #ship-to-different-address label,
+    .checkout-page__content .woocommerce-shipping-fields .shipping_address .form-row label,
+    .checkout-page__content .woocommerce-billing-fields .form-row label {
+        color: #a6a6a6;
+    }
+    .cart-detail h3,
+    .billing-info h3,
+    .your-order h2,
+    .checkout-page__content #payment h3 {
+        border-color: #666;
+        color: #fff;
+    }
+    .checkout-page__content #payment > .payment_methods li label {
+        color: #fff;
+    }
+    .checkout-page__content #payment .place-order {
+        border-top-color: #666;
+    }
+    .billing-info .billing-table td h4,
+    .order-table thead tr th {
+        color: #d4d4d4;
+    }
+    .cart-detail .cart-detail-table tfoot th,
+    .cart-detail .cart-detail-table td {
+        color: #a6a6a6;
+    }
+    .cart-detail .cart-detail-table td {
+        font-weight: 400;
+    }
+    .related-post .post,
+    .blog-page__content .post {
+        border-color: #666;
+    }
+    .related-post .post .post-content,
+    .blog-page__content .post .post-content {
+        color: #d4d4d4;
+    }
+    .blog-page__content .post .post-content {
+        h1, h2, h3, h4, h5, h6 {
+            color: #fff
+        }
+    }
+    .page-sidebar .widget_has_thumbnail .content a,
+    .page-sidebar .widget_latest_post ul li a,
+    .page-sidebar .widget_rss ul li a,
+    .page-sidebar .widget_meta ul li a,
+    .page-sidebar .widget_pages ul li a,
+    .page-sidebar .widget_nav_menu ul li a,
+    .page-sidebar .widget_categories ul li a,
+    .page-sidebar .widget_archive ul li a {
+        color: #ddd;
+        &:hover {
+            color: $color;
+        }
+    }
+    #comments .comment-abs a,
+    .post-footer .cat-box .cat a,
+    .post-footer .tag-box .tag a,
+    .tagcloud a {
+        background-color: #333;
+        &:hover {
+            background-color: $color;
+        }
+    }
+
+    .page__pagination {
+        span,
+        a {
+            color: #a6a6a6;
+            background-color: #333;
+            &.current,
+            &:hover {
+                color: #000;
+                background-color: $color;
+            }
+        }
+    }
+    .related-post .post .post-title h1,
+    .blog-page__content .post .post-title h1 {
+        color: $color;
+    }
+    #comments cite.fn a,
+    .post-footer > div h4 {
+        color: #d4d4d4;
+    }
+    #comments cite.fn a:hover {
+        color: $color;
+    }
+    .related-post,
+    .about-author {
+        border-color: #666;
+    }
+    .about-author .author-title h4 {
+        color: #a5a5a5;
+    }
+    .about-author .author-name h3 {
+        color: $color;
+    }
+    #respond .reply-title h4 {
+        color: #fff;
+    }
+    .owl-carousel .owl-controls .owl-buttons > div .fa {
+        background-color: #333;
+    }
+    .awe-navigation .menu-list li .sub-menu,
+    .minicart-wrap .minicart-body {
+        background-color: #333;
+        border-color: #4A4A4A;
+    }
+
+    .awe-navigation .menu-list li .sub-menu {
+        li {
+            a {
+                color: #ddd;
+                border-color: #4A4A4A;
+            }
+        }
+    }
+    .minicart-wrap .minicart-body .minicart-footer,
+    .minicart-wrap .minicart-body .minicart-total,
+    .minicart-wrap .minicart-body .minicart-list {
+        border-color: #4A4A4A;
+    }
+    .minicart-wrap .minicart-body .minicart-list li .product-name a {
+        color: #ddd;
+        &:hover {
+            color: $color;
+        }
+    }
+    .minicart-wrap .minicart-body .minicart-list li .product-price .amount {
+        color: #d4d4d4;
+    }
+    .minicart-wrap .minicart-body .minicart-list li .product-remove a {
+        color: #a6a6a6;
+        &:hover {
+            color: $color;
+        }
+    }
+    .blog-heading-content {
+        h2 {
+            background-color: #1E1E1F;
+            color: $color;
+        }
+    }
+    .login-register-page__content form:after {
+        background-color: $color;
+    }
+    .login-register-page__content form .form-item label {
+        color: #333;
+    }
+    .login-register-page__content form .terms-conditions,
+    .login-register-page__content form .forgot-password {
+        color: #333;
+        &:hover {
+            color: #444;
+        }
+    }
+    .login-register-page__content form .form-item input {
+        background-color: #F2F2F2;
+        border: 0;
+        color: #666;
+    }
+    .login-register-page__content form .form-actions input {
+        background-color: #212122;
+        color: $color;
+        &:hover {
+            opacity: 1;
+            background-color: #fff;
+        }
+    }
+    .contact-page__form .descriptions {
+        color: #a6a6a6;
+    }
+    .travelling-block {
+        background-color: rgba(30, 30, 31, 0.9);
+    }
+    .travelling-block .title h2 {
+        color: #fff;
+    }
+    .purpose-slider .owl-controls .owl-buttons > div .fa {
+        background-color: transparent;
+    }
+    .travelling-tabs__time .season .item a .awe-icon,
+    .purpose-slider .item .awe-icon {
+        background-color: rgba(255,255,255,.2);
+        color: #fff !important
+    }
+    .travelling-tabs .ui-tabs-nav li .ui-tabs-anchor {
+        border-color: #444;
+    }
+    .travelling-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+    .purpose-slider .item:hover .awe-icon {
+        color: #1E1E1F;
+    }
+    .travelling-tabs .ui-tabs-nav li.ui-state-hover .ui-tabs-anchor {
+        color: #888;
+        border-color: #666
+    }
+    .travelling-tabs__region .item span,
+    .purpose-slider .item span {
+        color: #fff;
+    }
+    .travelling-tabs__region .item:hover span,
+    .purpose-slider .item:hover span {
+        color: $color;
+    }
+    .travelling-tabs__region .item .awe-icon {
+        color: #fff;
+        opacity: .2;
+    }
+    .travelling-tabs__region .item:hover .awe-icon {
+        color: $color;
+        opacity: 1;
+    }
+    .travelling-tabs__advance-filter label,
+    .travelling-tabs__price .budget-level label,
+    .travelling-tabs__price .currency label {
+        color: $color;
+    }
+    .travelling-tabs__price .currency span,
+    .travelling-tabs__price .price_slider_amount {
+        color: #a5a5a5;
+    }
+    .travelling-tabs__price .currency .awe-select-wrapper .fa,
+    .travelling-tabs__price .currency .awe-select-wrapper select {
+        background-color: #444;
+        border: 0;
+        color: #a6a6a6;
+    }
+    .travelling-tabs__time .season .item a span {
+        color: #fff;
+        @include transition;
+    }
+    .travelling-tabs__time .season .item.hover-active a .awe-icon {
+        background-color: $color;
+        color: #1E1E1F;
+    }
+    .travelling-tabs__time .season .item.hover-active a span {
+        color: $color;
+    }
+    .your-destinations .title h2,
+    .travelling-tabs__time .month .item a {
+        color: #fff;
+    }
+    .travelling-tabs__time .month .item a:before,
+    .travelling-tabs__time .month .item:after {
+        border-color: #fff;
+    }
+    .travelling-tabs__time .month .item.hover-active a:before {
+        border-color: $color;
+    }
+    .travelling-tabs__time .month .item.hover-active a {
+        color: $color;
+    }
+    .travelling-tabs__advance-filter .form-elements .fa,
+    .travelling-tabs__advance-filter .form-elements .awe-icon,
+    .travelling-tabs__advance-filter input,
+    .travelling-tabs__advance-filter select {
+        background-color: #444;
+        border: 0;
+        color: #a6a6a6;
+    }
+    .flight-item, .trip-item, .attraction-item, .hotel-item,
+    .destination-list__content .destinations-item {
+        background-color: #262626;
+    }
+    .flight-item .item-price-more .price > .amount, 
+    .flight-item .item-price-more .price ins .amount, 
+    .trip-item .item-price-more .price > .amount, 
+    .trip-item .item-price-more .price ins .amount, 
+    .attraction-item .item-price-more .price > .amount,
+    .attraction-item .item-price-more .price ins .amount,
+    .hotel-item .item-price-more .price > .amount,
+    .hotel-item .item-price-more .price ins .amount,
+    .flight-item .item-body .item-title h2 a, 
+    .trip-item .item-body .item-title h2 a, 
+    .attraction-item .item-body .item-title h2 a, 
+    .hotel-item .item-body .item-title h2 a,
+    .destination-list__content .destinations-item .item-price-more .price .amount,
+    .destination-list__content .destinations-item:hover .item-body .item-footer ul li h6,
+    .destination-list__content .destinations-item .item-body .item-title h2 a {
+        color: $color;
+    }
+    .destination-list__content .destinations-item .item-body .item-footer ul li > p,
+    .destination-list__content .destinations-item .item-body .item-description {
+        color: #a5a5a5;
+    }
+    .destination-list__content .destinations-item .item-body .item-footer ul li h6 {
+        color: #f1f1f1;
+    }
+    .destination-list__content .destinations-item .item-price-more .price {
+        color: #b1b1b1;
+    }
+    #comments .commentlist > .comment .comment-box,
+    .page-top .list-link li a:before,
+    .widget_has_radio_checkbox ul li label .awe-icon-check,
+    .flight-item .item-price-more:after,
+    .trip-item .item-price-more:after,
+    .attraction-item .item-price-more:after,
+    .hotel-item .item-price-more:after,
+    .destination-list__content .destinations-item .item-price-more:after {
+        border-color: #444;
+    }
+    .page-top .awe-select-wrapper .fa,
+    .page-top .awe-select-wrapper .awe-select,
+    .your-destinations .your-destinations__bar .order .fa,
+    .your-destinations .your-destinations__bar .order select {
+        background-color: #444;
+        border: 0;
+        color: #a6a6a6;
+    }
+    .flight-item .item-body .item-address, 
+    .trip-item .item-body .item-address, 
+    .attraction-item .item-body .item-address, 
+    .hotel-item .item-body .item-address {
+        color: #A5A5A5;
+    }
+    .page-sidebar .widget,
+    .page-sidebar .sidebar-title {
+        border-bottom-color: #000;
+    }
+    .page-top .list-link li.current a:before {
+        border-color: $color;
+    }
+    .breadcrumb:after {
+        background-color: rgba(0,0,0,.9);
+    }
+    .breadcrumb ul li a::after {
+        border-left-color: #333
+    }
+    .category-heading-content > h3 {
+        color: #000;
+    }
+    .category-heading-content > h2 {
+        background-color: #1E1E1F;
+    }
+    .price-slider:after,
+    .category-heading-content > h2 .awe-icon {
+        background-color: #333;
+    }
+    .related-post h4 {
+        color: #fff;
+    }
+    ~ .ui-datepicker {
+        background-color: #333;
+        border-color: #666;
+        .ui-datepicker-header {
+            background-color: #222;
+            .ui-datepicker-title {
+                color: $color;
+            }
+            .ui-datepicker-prev,
+            .ui-datepicker-next {
+                background-color: rgba(255,255,255,.1);
+                cursor: pointer;
+                &:hover {
+                    background-color: $color;
+                }
+            }
+            .ui-icon-circle-triangle-w {
+                border-right-color: #fff;
+            }
+            .ui-icon-circle-triangle-e {
+                border-left-color: #fff;
+            }
+        }
+        .ui-datepicker-calendar {
+            tbody {
+                tr {
+                    td {
+                        a {
+                            background-color: #222;
+                            border: 0;
+                            color: #a6a6a6;
+                            &:hover {
+                                background-color: $color;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .ui-state-active,
+            .ui-widget-content .ui-state-active,
+            .ui-widget-header .ui-state-active {
+                background-color: $color;
+                color: #fff;
+            }
+        }
+    }
+    .category-heading-content .find form {
+        background-color: rgba(0,0,0,.8);
+        .form-item {
+            input,
+            select {
+                background-color: #444;
+                border: 0;
+                color: #a6a6a6;
+            }
+            .fa,
+            .awe-icon {
+                background-color: #444;
+                color: #a6a6a6;
+            }
+        }
+    }
+    .product-detail__info .rating-trip-reviews .item h6,
+    .product-detail__info .property-highlights .item span,
+    .product-detail__info .product-descriptions {
+        color: #eee;
+    }
+    .product-detail__info .product-address,
+    .product-detail__info .product-email a {
+        color: #a5a5a5;
+        &:hover {
+            color: $color;
+        }
+    }
+    .room-type-table tbody td,
+    .room-type-table thead th,
+    .product-detail__info .property-highlights h3 {
+        border-color: #333;
+    }
+    .room-type-table tbody td.room-price .price .full-price-open-popup:hover,
+    .room-type-table tbody td.room-price .price em,
+    .room-type-table tbody td.room-condition .list-condition li,
+    .room-type-table tbody td.room-type .room-descriptions,
+    .room-type-table tbody td,
+    .room-type-table thead th {
+        color: #a6a6a6;
+    }
+    .room-type-table tbody td.room-type .room-title h4 {
+        color: $color;
+    }
+    .call-to-book span,
+    .call-to-book .awe-icon,
+    .room-type-table tbody td.room-price .price .amount,
+    .room-type-table tbody td.room-people .awe-icon {
+        color: #fff;
+    }
+    .call-to-book .awe-icon {
+        border-color: #fff;
+    }
+    .product-tabs__content .ui-tabs-panel .check-availability {
+        background-color: #333;
+        .form-elements {
+            label {
+                color: $color;
+            }
+            .fa, .awe-icon,
+            input,
+            select {
+                background-color: #444;
+                border: 0;
+                color: #a6a6a6;
+            }
+        }
+    }
+    .good-to-know-table,
+    .facilities-freebies-table {
+        tbody {
+            tr {
+                border-bottom-color: #666;
+                th {
+                    color: #fff;
+                }
+                td {
+                    color: #a6a6a6;
+                }
+            }
+        }
+    }
+    #reviews {
+        #comments {
+            .commentlist {
+                li {
+                    .comment-box {
+                        background-color: #262626;
+                        .comment-body {
+                            .meta {
+                                strong {
+                                    color: #fff;
+                                }
+                            }
+                            .rating-info {
+                                .average-rating-review {
+                                    em {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                            .rating-review li em {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #add_review {
+            background-color: #262626;
+            .comment-reply-title {
+                color: #fff;
+            }
+            form {
+                > div {
+                    label {
+                        color: #fff;
+                    }
+                }
+                .comment-form-rating {
+                    h4 {
+                        color: #fff;
+                    }
+                }
+                .comment-form-author,
+                .comment-form-email,
+                .comment-form-rating,
+                .comment-form-comment {
+                    input, textarea, select, .fa {
+                        background-color: #333;
+                        border: 0;
+                        color: #a5a5a5;
+                    }
+                }
+            }
+        }
+    }
+    .ticket-price tbody tr td del .amount,
+    .ticket-price tbody tr td em,
+    .product-detail__info .trips .item p,
+    .trip-schedule-accordion .trips .item p {
+        color: #a5a5a5;
+    }
+    .product-detail__info .trips .item h6 {
+        color: #fff;
+    }
+    .ticket-price thead th span {
+        color: #fff;
+    }
+    .initiative-top .title .from-to {
+        color: #fff;
+    }
+    .initiative-table {
+        background-color: #333;
+        tbody {
+            tr {
+                border-color: #1e1e1f;
+                .item-thumb {
+                    &:after {
+                        border-color: #444;
+                    }
+                }
+            }
+        }
+    }
+    .services-on-flight .item label, {
+        color: #a5a5a5;
+    }
+    .services-on-flight .item label .awe-icon-check {
+        border-color: #444;
+    }
+    .booking-info {
+        background-color: $color;
+        border-color: $color;
+        .price {
+            border-color: rgba(0,0,0,.2);
+            em,
+            .amount {
+                color: #1E1E1F;
+            }
+            .cart-added {
+                color: #444;
+                .awe-icon {
+                    box-shadow: 0 0 0 2px #fff;
+                }
+            }
+        }
+        .add-room-type > a {
+            color: #000;
+        }
+        .form-item {
+            .fa, .awe-icon,
+            select,
+            input {
+                background-color: #fff;
+                border: 0;
+            }
+        }
+        .reset {
+            color: #1E1E1F;
+        }
+        .form-baggage-weight,
+        .form-kids,
+        .form-adult,
+        .form-checkin,
+        .form-select-date {
+            span {
+                color: #fff;
+            }
+        }
+        .form-submit {
+            .add-to-cart {
+                button {
+                    background-color: #CC1453;
+                    &:hover {
+                        background-color: #444;
+                    }
+                }
+            }
+        }
+        .awe-icon,
+        .fa {
+            top: 0;
+            right: 0;
+            height: 36px;
+        }
+    }
+    .toggle-menu-responsive {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        .item {
+            background-color: #111;
+        }
+        &.toggle-active {
+            .item {
+                background-color: #111;
+            }
+        }
+    }
+    .awe-navigation-hamburger {
+        .toggle-menu-responsive {
+            &:hover {
+                .item {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    .trip-flight-hotel__table tbody tr {
+        background-color: #262626;
+        border-bottom: 5px solid #1E1E1F;
+    }
+    .trip-flight-hotel__table tbody tr .item-price {
+        border-left: 2px dotted #444;
+    }
+    .trip-flight-hotel__table tbody tr .item-title h2 a {
+        color: #fff;
+    }
+    .trip-flight-hotel__table tbody tr:hover .item-title h2 a {
+        color: $color;
+    }
+}
+.body-dark {
+    .awe-btn {
+        background-color: #444;
+        border-color: #444;
+        color: #fff;
+        &.awe-btn-style2 {
+            border: 0;
+            background-color: #ddd;
+            color: #666;
+        }
+        &.awe-btn-style3 {
+            border: 0;
+            background-color: $color;
+            color: #fff;
+            &:focus,
+            &:hover {
+                background-color: #575757;
+                color: #fff;
+            }
+        }
+        &:focus,
+        &:hover {
+            background-color: $color;
+            border-color: $color;
+            color: #111;
+        }
+    }
+    .room-type-popup {
+        background-color: #262626;
+    }
+    .room-type-popup .form-elements {
+        label {
+            color: $color;
+        }
+    }
+    .room-type-popup .form-elements .fa,
+    .room-type-popup .form-elements .awe-icon,
+    .room-type-popup .form-elements select,
+    .room-type-popup .form-elements input {
+        background-color: #444;
+        border: 0;
+        color: #a6a6a6;
+    }
+    .room-type-popup .calendar-header h2 {
+        background-color: #444;
+    }
+    .room-type-popup .calendar-body thead tr th span {
+        color: #a5a5a5;
+    }
+    .room-type-popup .calendar-body tbody tr td {
+        border-color: #262626;
+    }
+    .room-type-popup .calendar-body tbody .item-calendar {
+        background-color: #444;
+    }
+    .room-type-popup .calendar-body tbody .item-calendar.item-active {
+        background-color: $color;
+    }
+    .room-type-popup .calendar-body tbody .item-calendar.item-active .date,
+    .room-type-popup .calendar-body tbody .item-calendar.item-active .price {
+        color: #000;
+    }
+    .room-type-popup .calendar-body tbody .item-calendar .price {
+        color: #fff;
+    }
+    .room-type-popup .calendar-body tbody .item-calendar .date {
+        color: #a6a6a6;
+    }
+    .room-type-popup .calendar-body tbody .item-calendar.sat,
+    .room-type-popup .calendar-body tbody .item-calendar.sun {
+        background-color: #666;
+    }
+    .room-type-popup .calendar-body tbody .item-calendar.not-available {
+        background-color: #111;
+    }
+    .sale-flight-popup {
+        background-color: #262626;
+    }
+    .sale-flight-popup .sale-flights-tabs__table tr {
+        background: none;
+        .sale-flights-tabs__item-choose {
+            &:after {
+                border-color: #444;
+            }
+        }
+        .sale-flights-tabs__item-depart,
+        .sale-flights-tabs__item-arrive,
+        .sale-flights-tabs__item-duration {
+            h4 {
+                color: #fff;
+            }
+        }
+    }
+    .sale-flights-tabs__table tr .sale-flights-tabs__item-flight .image-wrap {
+        border: 0;
+    }
+    .flight-popup {
+        background-color: #333;
+        .flight-popup__content {
+            .title {
+                h2 {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .flight-popup-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+        color: #fff;
+    }
+    .flight-popup-tabs .flight-popup__history .item:after,
+    .flight-popup-tabs .ui-tabs-nav:after {
+        border-color: #666;
+    }
+    .flight-popup-tabs .flight-popup__history .item .descriptions,
+    .flight-popup-tabs .flight-popup__overview .flight-popup__descriptions,
+    .flight-popup-tabs .flight-popup__history .item .year {
+        color: #a5a5a5;
+    }
+    .flight-popup-tabs .flight-popup__history .item:hover .year {
+        color: #fff;
+    }
+    .flight-popup-tabs .flight-popup__history .item .icon-active {
+        background-color: #333;
+        border-color: #666;
+    }
+    .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item {
+        background-color: #444;
+        border-color: #444;
+    }
+
+    .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item:hover,
+    .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item.map-active {
+        border-color: $color;
+    }
+    .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item .item-title h2,
+    .flight-popup-tabs .flight-popup__map-content .flight-popup__map-content-list .map-item:before {
+        color: #fff;
+    }
+
+
+    .flight-popup-tabs .flight-popup__grid-wrapper .grid-item .image-wrap:before {
+        border-color: #333;
+    }
+    .sale-flight-popup .title .from-to {
+        color: #fff;
+    }
+    .sale-flight-popup .sale-flights-tabs__table tr {
+        -webkit-box-shadow: inset 0 0 0 2px #666;
+        -moz-box-shadow: inset 0 0 0 2px #666;
+        box-shadow: inset 0 0 0 2px #666;
+    }
+}

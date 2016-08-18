@@ -1,0 +1,728 @@
+@media screen and (max-width: 1199px) {
+    .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1),
+    .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2),
+    .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(3) {
+        padding-right: 30px;
+    }
+    .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(1) {
+        width: 28%;
+    }
+    .awe-search-tabs__content .ui-tabs-panel .form-actions {
+        width: 17.4%;
+    }
+    .awe-search-tabs-2 {
+        position: relative;
+        left: auto;
+        right: auto;
+        @include translateY(0);
+        margin-top: -43px;
+    }
+    .filter-item-wrapper {
+        overflow: hidden;
+        width: auto;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .flight-item, 
+    .trip-item, 
+    .attraction-item, 
+    .hotel-item {
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 30px;
+        box-shadow: none !important;
+    }
+
+    .flight-item .item-price-more, 
+    .trip-item .item-price-more, 
+    .attraction-item .item-price-more,
+    .hotel-item .item-price-more,
+    .flight-item .item-body,
+    .trip-item .item-body,
+    .attraction-item .item-body,
+    .hotel-item .item-body,
+    .flight-item .item-media,
+    .trip-item .item-media,
+    .attraction-item .item-media,
+    .hotel-item .item-media {
+        float: none;
+        width: 100%;
+    }
+    .flight-item .item-price-more:after,
+    .trip-item .item-price-more:after,
+    .attraction-item .item-price-more:after,
+    .hotel-item .item-price-more:after {
+        display: none;
+    }
+    .flight-item .item-body .item-footer, 
+    .trip-item .item-body .item-footer, 
+    .attraction-item .item-body .item-footer, 
+    .hotel-item .item-body .item-footer {
+        margin-top: 20px;
+    }
+    .flight-item .item-price-more,
+    .trip-item .item-price-more, 
+    .attraction-item .item-price-more, 
+    .hotel-item .item-price-more {
+        margin: 10px 0 20px 0;
+    }
+    .travelling-block {
+        padding: 35px;
+    }
+    .travelling-tabs__advance-filter .form-group {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .travelling-tabs__advance-filter .form-elements.form-checkin, 
+    .travelling-tabs__advance-filter .form-elements.form-checkout {
+        width: 47%;
+    }
+    .travelling-tabs__advance-filter .form-elements.form-checkin {
+        margin-right: 3%;
+    }
+    .travelling-tabs__advance-filter .form-elements.form-checkout {
+        margin-left: 3%;
+    }
+    .destination-list__content .destinations-item .item-media .image-cover {
+        padding-top: 84%;
+    }
+    .destination-list__content .destinations-item .item-body {
+        width: 61% - 2%;
+    }
+    .destination-list__content .destinations-item .item-price-more {
+        width: 15% + 2%;
+    }
+    .destination-list__content .destinations-item .item-body .item-footer ul li {
+        margin-right: 30px;
+    }
+    .category-heading-content .find .form-elements:nth-child(1),
+    .category-heading-content .find .form-elements:nth-child(2) {
+        width: 21%;
+        padding-right: 30px;
+    }
+    .category-heading-content .find .form-elements:nth-child(3) {
+        width: 16%;
+    }
+    .category-heading-content .find .form-elements:nth-child(4) {
+        width: 20%;
+    }
+    #reviews .rating-info .write-review {
+        display: block;
+        clear: both;
+        float: left;
+    }
+    .flight-item .item-body .item-footer .item-icon, 
+    .trip-item .item-body .item-footer .item-icon, 
+    .attraction-item .item-body .item-footer .item-icon, 
+    .hotel-item .item-body .item-footer .item-icon {
+        float: none;
+        margin-top: 10px;
+    }
+    .flight-item .item-body .item-footer .item-rate, 
+    .trip-item .item-body .item-footer .item-rate, 
+    .attraction-item .item-body .item-footer .item-rate, 
+    .hotel-item .item-body .item-footer .item-rate {
+        float: none;
+    }
+    .flight-item .item-body .item-footer .item-icon .awe-icon, 
+    .trip-item .item-body .item-footer .item-icon .awe-icon, 
+    .attraction-item .item-body .item-footer .item-icon .awe-icon, 
+    .hotel-item .item-body .item-footer .item-icon .awe-icon {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .awe-search-tabs-2 {
+        .awe-search-tabs__content {
+            .ui-tabs-panel {
+                .form-group {
+                    &:nth-child(1) {
+                        width: 38%;
+                        padding-right: 0;
+                        .form-elements {
+                            width: calc(50% - 15px);
+                            margin-right: 15px;
+                        }
+                    }
+                    &:nth-child(2) {
+                        width: 30%;
+                        padding-right: 10px;
+                        .form-elements {
+                            &:nth-child(odd) {
+                                padding-right: 1px;
+                            }
+                            &:nth-child(even) {
+                                padding-left: 1px;
+                            }
+                        }
+                    }
+                    &:nth-child(3) {
+                        width: 14%;
+                        padding-right: 10px;
+                    }
+                }
+                &.search-hotel {
+                    .form-group {
+                        &:nth-child(1) {
+                            padding-right: 30px;
+                            .form-elements {
+                                width: 100%;
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                &.search-car {
+                    .form-group {
+                        &:nth-child(1) {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-kids,
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-adult,
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-checkin,
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-checkout {
+        width: 48%;
+        margin: 0;
+        margin-top: 20px;
+    }
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-adult,
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-checkin {
+        margin-right: 2%;
+    }
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-kids,
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-checkout {
+        margin-left: 2%;
+    }
+    .product-tabs__content .ui-tabs-panel .check-availability .form-actions {
+        width: 100%;
+        margin-left: 0;
+    }
+    .awe-search-tabs__content .ui-tabs-panel.search-bus .form-group:nth-child(2),
+    .awe-search-tabs__content .ui-tabs-panel.search-car .form-group:nth-child(2) {
+        width: 42%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .awe-search-tabs__content .ui-tabs-panel .form-group,
+    .awe-search-tabs__content .ui-tabs-panel .form-actions {
+        width: 100% !important;
+        padding-right: 0 !important;
+        margin-bottom: 0;
+    }
+    .awe-search-tabs__content .ui-tabs-panel .form-actions {
+        margin-top: 20px !important;
+    }
+    .awe-masonry .awe-masonry__item {
+        width: 33.3333333333% !important;
+    }
+    #footer-page {
+        .widget_contact_info {
+            margin-top: 0;
+            padding: 0;
+            &:before,
+            &:after {
+                display: none;
+            }
+            .widget_background {
+                display: none;
+            }
+        }
+    }
+    .cart-content .cart-table tbody td.product-remove {
+        padding-left: 40px;
+    }
+    .contact-page__form {
+        padding-top: 60px;
+    }
+    .travelling-tabs__advance-filter .form-group {
+        width: 100%;
+        float: none;
+    }
+    .destination-list__content {
+        width: auto;
+        overflow: hidden;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .destination-list__content .destinations-item {
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 30px;
+    }
+    .destination-list__content .destinations-item .item-price-more,
+    .destination-list__content .destinations-item .item-body,
+    .destination-list__content .destinations-item .item-media {
+        float: none;
+        width: 100%;
+    }
+    .destination-list__content .destinations-item .item-price-more {
+        padding: 0 25px 25px;
+    }
+    .destination-list__content .destinations-item .item-body {
+        padding: 15px 25px;
+    }
+    .destination-list__content .destinations-item .item-price-more:after {
+        display: none;
+    }
+
+    .category-heading-content .find .form-elements {
+        width: 100% !important;
+        padding: 0 !important;
+        margin-bottom: 20px;
+    }
+    .category-heading-content.category-heading-content__2 {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+    .tabs .ui-tabs-nav li {
+        background: none;
+        border: 0;
+        margin: 0 30px 0 0;
+    }
+    .tabs .ui-tabs-nav li .ui-tabs-anchor {
+        font-size: 14px;
+        line-height: 46px;
+    }
+    .tour-map {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+    .tour-map-wrapper .trips {
+        margin-top: 25px;
+    }
+    .ticket-price {
+        margin-bottom: 30px;
+    }
+    .awe-search-tabs-2 {
+        .awe-search-tabs__content {
+            .ui-tabs-panel {
+                .form-group {
+                    &:nth-child(1) {
+                        .form-elements {
+                            width: 50%;
+                            margin: 0;
+                            padding-bottom: 20px;
+                            &:nth-child(odd) {
+                                padding-right: 15px;
+                            }
+                            &:nth-child(even) {
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        padding-right: 0;
+                        .form-elements {
+                            width: 50%;
+                            padding-bottom: 20px;
+                            &:nth-child(odd) {
+                                padding-right: 15px;
+                            }
+                            &:nth-child(even) {
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                }
+                &.search-hotel {
+                    .form-group {
+                        &:nth-child(1) {
+                            .form-elements {
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .flight-item .item-media .image-cover {
+        padding-top: 40%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .related-post .post .post-media, .blog-page__content .post .post-media {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+    .blog-page__content {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .blog-page__content .post {
+        width: calc(50% - 30px);
+        float: left;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .blog-page__content.blog-single {
+        margin-left: 0;
+        margin-right: 0;
+        .post {
+            width: 100%;
+            float: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+@media screen and (max-width: 740px) {
+    .awe-search-tabs__content {
+        padding: 20px;
+    }
+    .awe-masonry .awe-masonry__item {
+        width: 50% !important;
+    }
+    #reviews #comments .commentlist li .comment-box .comment-body .rating-info .average-rating-review,
+    #reviews #comments .commentlist li .comment-box .comment-body .rating-info .rating-review {
+        display: block;
+        float: none;
+    }
+    #reviews #comments .commentlist li .comment-box .comment-body .rating-info .rating-review {
+        margin-left: -20px;
+        margin-right: -30px;
+        margin-top: 15px;
+    }
+    #reviews .rating-info .rating-review,
+    #reviews .rating-info .average-rating-review {
+        display: block;
+        float: none;
+    }
+    #reviews .rating-info .rating-review {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .flight-popup-tabs .flight-popup__scrollbar {
+        height: 360px;
+    }
+    .flight-popup-tabs .ui-tabs-nav li .ui-tabs-anchor {
+        font-size: 12px;
+    }
+    .room-type-popup .room-type-popup-inner,
+    .sale-flight-popup {
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 720px) {
+    .filter-item-wrapper {
+        overflow: hidden;
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .flight-item, 
+    .trip-item, 
+    .attraction-item, 
+    .hotel-item {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .cart-detail,
+    .billing-info {
+        width: 100%;
+        float: none;
+    }
+    .cart-detail {
+        margin-top: 30px;
+    }
+    .checkout-page__top .title,
+    .checkout-page__top .phone {
+        float: none;
+    }
+
+    .destination-list__content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .destination-list__content .destinations-item {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .your-destinations .title,
+    .your-destinations .your-destinations__bar {
+        float: none;
+        overflow: hidden;
+    }
+    .your-destinations .your-destinations__bar {
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-top: 20px;
+    }
+    .flight-popup .flight-popup__content {
+        width: 100%;
+    }
+    .flight-popup .flight-popup__map-info {
+        position: relative !important;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 200px;
+    }
+}
+@media screen and (max-width: 610px) {
+    .blog-page__content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .blog-page__content .post {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .travelling-tabs__price .currency,
+    .travelling-tabs__price .budget-level {
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+    .travelling-tabs__price .currency {
+        margin-top: 30px;
+    }
+    .category-heading-content .find h2 {
+        font-size: 36px;
+    }
+    .product-detail__info .property-highlights .item,
+    .product-detail__info .trips .item {
+        width: 50%;
+    }
+    .awe-search-tabs-2 .ui-tabs-nav li .ui-tabs-anchor {
+        min-width: 0;
+    }
+}
+@media screen and (max-width: 570px) {
+    .awe-search-tabs__content .ui-tabs-panel .form-group:nth-child(2) .form-elements {
+        width: 100%;
+        padding: 0 !important;
+    }
+    .awe-masonry .awe-masonry__item {
+        width: 100% !important;
+    }
+    .post-footer > div {
+        width: 100%;
+        float: none;
+    }
+    .services-on-flight .item {
+        width: 100%;
+        float: none;
+    }
+    #reviews #comments .commentlist li .comment-box .avatar {
+        float: none;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    #reviews .rating-info .rating-review li {
+        margin-bottom: 10px;
+    }
+    #reviews #comments .commentlist li .comment-box .comment-body .meta strong {
+        display: block;
+    }
+    #reviews #comments .commentlist li .comment-box .comment-body .meta time {
+        float: none;
+    }
+    #reviews #comments .commentlist li .comment-box .comment-body .description {
+        margin-top: 10px;
+    }
+    .awe-search-tabs {
+        margin-top: -38px;
+    }
+    .awe-search-tabs .ui-tabs-nav {
+        height: 38px;
+    }
+    .awe-search-tabs .ui-tabs-nav li .ui-tabs-anchor {
+        line-height: normal;
+    }
+    .awe-search-tabs .ui-tabs-nav li .ui-tabs-anchor .awe-icon {
+        width: 40px;
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .awe-search-tabs-2 .ui-tabs-nav li .ui-tabs-anchor {
+        font-size: 10px;
+    }
+
+    .awe-search-tabs-2 {
+        .awe-search-tabs__content {
+            .ui-tabs-panel {
+                .form-group {
+                    .form-elements {
+                        width: 100% !important;
+                        margin: 0;
+                        padding-left: 0 !important;
+                        padding-right: 0 !important;
+                        padding-bottom: 20px !important;
+                    }
+                }
+            }
+
+        }
+    }
+}
+@media screen and (max-width: 480px) {
+    .blog-heading-content h2 {
+        font-size: 20px;
+    }
+    .category-heading-content .find h2 {
+        font-size: 32px;
+    }
+    .blog-page__content .post .post-title h1 {
+        font-size: 30px;
+        line-height: 1.5em;
+    }
+    .about-author .image-thumb {
+        float: none;
+    }
+    .about-author .author-info {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    #comments .commentlist .comment-author {
+        float: none;
+        margin-bottom: 10px;
+    }
+    #comments .commentlist .children {
+        margin-left: 30px;
+    }
+    #comments .comment-abs {
+        position: static;
+        margin-left: -4px;
+        margin-right: -4px;
+        margin-top: 10px;
+    }
+    .travelling-tabs .ui-tabs-nav li {
+        width: 100%;
+        margin: 10px 0 0;
+        a {
+            display: block;
+            width: 100%;
+        }
+    }
+    .travelling-tabs__advance-filter .form-group {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .travelling-tabs__advance-filter .form-elements.form-checkin,
+    .travelling-tabs__advance-filter .form-elements.form-checkout {
+        width: 100%;
+        margin: 0;
+    }
+    .travelling-tabs__region .item {
+        width: 50%;
+        float: left;
+    }
+    .travelling-tabs__region .item .awe-icon {
+        font-size: 50px;
+    }
+    .travelling-tabs__region .item span {
+        font-size: 12px;
+    }
+    .category-heading-content .find form {
+        padding: 20px 30px;
+    }
+    .login-register-page__content .content-title h2 {
+        font-size: 40px;
+    }
+    .login-register-page__content form {
+        padding: 25px 30px;
+    }
+    .login-register-page__content .login-register-link {
+        font-size: 12px;
+    }
+    .product-detail__info .rating-trip-reviews .item {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+    .category-heading-content > h2 {
+        font-size: 20px;
+        padding: 0 84px 0 24px;
+        line-height: 60px;
+    }
+    .category-heading-content > h2 .awe-icon {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .flight-item .item-body, 
+    .trip-item .item-body, 
+    .attraction-item .item-body, 
+    .hotel-item .item-body {
+        padding: 15px 24px;
+    }
+    .flight-item .item-price-more, 
+    .trip-item .item-price-more, 
+    .attraction-item .item-price-more, 
+    .hotel-item .item-price-more {
+        padding: 0 24px;
+    }
+    .search-box .form-search .form-item input {
+        padding: 0 25px;
+        line-height: 60px;
+        height: 60px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .awe-search-tabs {
+        margin-top: -34px;
+    }
+    .awe-search-tabs .ui-tabs-nav {
+        height: 34px;
+        padding: 0 10px;
+    }
+    .awe-search-tabs .ui-tabs-nav li .ui-tabs-anchor .awe-icon {
+        width: 36px;
+        height: 34px;
+        line-height: 34px;
+    }
+    .heading-content h2 {
+        font-size: 24px;
+    }
+    .heading-content p {
+        font-size: 18px;
+    }
+    .destination-grid-content .section-title h3 {
+        font-size: 18px;
+    }
+    .sale-flight-popup,
+    .room-type-popup .room-type-popup-inner {
+        padding: 20px;
+    }
+
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-kids,
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-adult,
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-checkin,
+    .product-tabs__content .ui-tabs-panel .check-availability .form-elements.form-checkout {
+        width: 100%;
+        float: none;
+        margin: 0;
+        margin-top: 20px;
+    }
+    .travelling-block .title h2 {
+        font-size: 24px;
+    }
+    .travelling-block {
+        padding: 15px;
+    }
+    .purpose-slider {
+        padding: 0 25px;
+    }
+    .destination-list__content .destinations-item .item-body .item-footer ul li {
+        margin-bottom: 10px;
+    }
+}

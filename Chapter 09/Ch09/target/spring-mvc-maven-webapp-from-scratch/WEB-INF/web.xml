@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Ch08-Client</display-name>
+  <!--  <context-param>
+    <param-name>contextClass</param-name>
+    <param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext</param-value>
+  </context-param>
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>org.packt.bus.portal.socket.WebSocketConfig</param-value>
+  </context-param>-->
+
+
+  <listener>
+    <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+  </listener>
+ <listener>
+<listener-class>
+  org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
+</listener-class>
+</listener>
+ 
+<context-param>
+		<param-name>resteasy.scan</param-name>
+		<param-value>true</param-value>
+	</context-param> 
+	
+	 <context-param>
+        <param-name>resteasy.servlet.mapping.prefix</param-name>
+        <param-value>/rest</param-value>
+    </context-param>
+	
+    <!--
+ <listener>
+          <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>  
+
+ -->
+    <listener>
+          <listener-class>org.packt.bus.portal.service.impl.SpringRestEasyContextLoaderListener</listener-class>
+    </listener>
+  
+    <context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/jdbc.xml
+		             /WEB-INF/dao_services.xml
+		             /WEB-INF/dwr-context.xml
+		             /WEB-INF/applicationContext.xml
+		         </param-value>
+	</context-param>
+  
+  <servlet>  
+    <servlet-name>bts</servlet-name>  
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
+    <load-on-startup>3</load-on-startup>
+    <async-supported>true</async-supported>
+</servlet>  
+  
+ <servlet-mapping>  
+    <servlet-name>bts</servlet-name>  
+    <url-pattern>*.html</url-pattern>  
+</servlet-mapping>	
+ <servlet-mapping>  
+    <servlet-name>bts</servlet-name>  
+    <url-pattern>*.json</url-pattern>  
+</servlet-mapping>
+
+ <servlet-mapping>  
+    <servlet-name>bts</servlet-name>  
+    <url-pattern>/chat/*</url-pattern>  
+</servlet-mapping>
+	
+<servlet>
+  <servlet-name>dwr</servlet-name>
+  <servlet-class>org.directwebremoting.spring.DwrSpringServlet</servlet-class>
+  <init-param>
+    <param-name>debug</param-name>
+    <param-value>true</param-value>
+  </init-param>
+</servlet>
+<servlet-mapping>
+  <servlet-name>dwr</servlet-name>
+  <url-pattern>/dwr/*</url-pattern>
+</servlet-mapping>
+
+
+   <servlet>
+        <servlet-name>RESTEasy</servlet-name>
+        <servlet-class>org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>org.packt.bus.portal.service.impl.EmployeeApplication</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>        
+    </servlet>
+    
+     <servlet-mapping>
+        <servlet-name>RESTEasy</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    
+    
+ <servlet>
+        <servlet-name>RESTEasy-JSAPI</servlet-name>
+        <servlet-class>org.jboss.resteasy.jsapi.JSAPIServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    
+<servlet-mapping>
+    <servlet-name>RESTEasy-JSAPI</servlet-name>
+    <url-pattern>/bus/js/rest-api.js</url-pattern>
+</servlet-mapping>
+
+
+
+</web-app>

@@ -1,0 +1,102 @@
+.login-register-page__content {
+    max-width: 390px;
+    width: 100%;
+    float: right;
+    padding: 63px 0 135px 0;
+    .content-title {
+        span {
+            font-size: 24px;
+            color: #202021;
+            line-height: 1.1em;
+        }
+        h2 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 1.1em;
+        }
+    }
+    form {
+        position: relative;
+        overflow: hidden;
+        margin-top: 22px;
+        padding: 34px 50px;
+        @include rounded(5px);
+        z-index: 9;
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0; left: 0;
+            background-color: #fff;
+            opacity: .8;
+            z-index: -1;
+        }
+        .form-item {
+            margin-bottom: 12px;
+            label {
+                display: block;
+                font-size: 14px;
+                font-weight: 600;
+                color: #666;
+            }
+            input {
+                width: 100%;
+            }
+        }
+        .terms-conditions,
+        .forgot-password {
+            float: left;
+            margin-top: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-decoration: underline;
+            max-width: 160px;
+            &:hover {
+                color: $color;
+            }
+        }
+        .terms-conditions {
+            margin-top: 18px;
+        }
+        .form-actions {
+            margin-top: 18px;
+            float: right;
+            input {
+                width: 100%;
+                text-align: center;
+                font-weight: 600;
+                color: #fff;
+                background-color: $color;
+                border: 0;
+                @include rounded(4px);
+                padding: 0 20px;
+                height: 40px;
+                line-height: 40px;
+                z-index: 9;
+                @include transition;
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+    .login-register-link {
+        background-color: #262626;
+        @include rounded(6px);
+        font-size: 14px;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 16px 0;
+        margin-top: 20px;
+        a {
+            color: inherit;
+            &:hover {
+                color: $color;
+            }
+        }
+    }
+}

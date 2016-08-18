@@ -1,0 +1,87 @@
+.contact-page__form {
+    padding-top: 82px;
+    padding-bottom: 120px;
+    .title {
+        span {
+            font-size: 24px;
+            color: #8f8f8f;
+        }
+        h2 {
+            color: $color;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 1.1em;
+            margin-top: 5px;
+        }
+    }
+    .descriptions {
+        color: #666;
+    }
+}
+
+.contact-form {
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+    .form-item {
+        width: 50%;
+        padding: 15px;
+        float: left;
+        input {
+            width: 100%;
+            border: 1px solid #eee;
+            background-color: #eee;
+        }
+    }
+    .form-textarea-wrapper {
+        width: 100%;
+        padding: 15px;
+        float: left;
+        textarea {
+            width: 100%;
+            border: 1px solid #eee;
+            background-color: #eee;
+        }
+    }
+    .form-captcha {
+        position: relative;
+        .wpcf7-captchac {
+            position: absolute;
+            padding: 15px 0;
+            top: 8px;
+            left: 22px;
+        }
+        .wpcf7-form-control-wrap {
+            display: block;
+        }
+        input {
+            padding-left: 90px;
+        }
+    }
+    .form-actions {
+        width: 100%;
+        padding: 15px;
+        float: left;
+        input {
+            width: 100%;
+            max-width: 100px;
+            text-align: center;
+            font-weight: 600;
+            color: #fff;
+            background-color: $color;
+            border: 0;
+            @include rounded(3px);
+            padding: 0 20px;
+            height: 40px;
+            line-height: 40px;
+            z-index: 9;
+            @include transition;
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+.contact-page__map {
+    min-height: 300px;
+}

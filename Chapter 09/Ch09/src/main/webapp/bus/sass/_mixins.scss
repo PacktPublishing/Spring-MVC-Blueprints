@@ -1,0 +1,228 @@
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+@mixin background-gradient($startColor: #3c3c3c, $endColor: #999999) {
+  background-color: $startColor;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+  background-image: -webkit-linear-gradient(top, $startColor, $endColor);
+  background-image: -moz-linear-gradient(top, $startColor, $endColor);
+  background-image: -ms-linear-gradient(top, $startColor, $endColor);
+  background-image: -o-linear-gradient(top, $startColor, $endColor);
+  background-image: linear-gradient(top, $startColor, $endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+@mixin background-radial($startColor: white, $startPos: 0%, $endColor: black, $endPos: 100%) {
+  background: -moz-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($startPos, $startColor), color-stop($endPos, $endColor));
+  background: -webkit-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+  background: -o-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+  background: -ms-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+  background: radial-gradient(ellipse at center, $startColor $startPos, $endColor $endPos);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$startColor}', endColorstr='#{$endColor}',GradientType=1 );
+}
+
+@mixin background-size($width: 100%, $height: $width) {
+  @if type-of($width) == "number" and $height != null {
+    @include prefix("background-size", $width $height);
+  }
+  @else {
+    @include prefix("background-size", $width);
+  }
+}
+
+@mixin background-opacity($color: black, $opacity: 0.85) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+@mixin rounded($radius: 5px) {
+  @include prefix("border-radius", $radius);
+}
+
+@mixin border-radius($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
+  -webkit-border-top-left-radius: $topLeftRadius;
+  -webkit-border-top-right-radius: $topRightRadius;
+  -webkit-border-bottom-right-radius: $bottomRightRadius;
+  -webkit-border-bottom-left-radius: $bottomLeftRadius;
+  -moz-border-radius-topleft: $topLeftRadius;
+  -moz-border-radius-topright: $topRightRadius;
+  -moz-border-radius-bottomright: $bottomRightRadius;
+  -moz-border-radius-bottomleft: $bottomLeftRadius;
+  border-top-left-radius: $topLeftRadius;
+  border-top-right-radius: $topRightRadius;
+  border-bottom-right-radius: $bottomRightRadius;
+  border-bottom-left-radius: $bottomLeftRadius;
+}
+
+@mixin box($orient: horizontal, $pack: center, $align: center) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  @include prefix("box-orient", $orient);
+  @include prefix("box-pack", $pack);
+  @include prefix("box-align", $align);
+}
+
+@mixin bg-rgba($r: 0, $g: 0, $b: 0, $opacity: 0.3) {
+  background-color: rgba($r, $g, $b, $opacity);
+}
+
+@mixin box-shadow($vals) {
+  -webkit-box-shadow: $vals;
+  -moz-box-shadow: $vals;
+  box-shadow: $vals;
+}
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing: $type;
+  box-sizing: $type;
+}
+
+@mixin columns($count: 3, $gap: 10) {
+  @include prefix("column-count", $count);
+  @include prefix("column-gap", $gap);
+}
+
+@mixin double-borders($colorOne: #3c3c3c, $colorTwo: #999999, $radius: 0) {
+  border: 1px solid $colorOne;
+  @include prefix("box-shadow", 0 0 0 1px $colorTwo);
+  @include border-radius($radius);
+}
+
+@mixin flex($value: 1) {
+  @include prefix("box-flex", $value);
+}
+
+@mixin font-face($fontFamily: myFont, $eotFileSrc: "myFont.eot", $woffFileSrc: "myFont.woff", $ttfFileSrc: "myFont.ttf") {
+  font-family: $fontFamily;
+  src: url($eotFileSrc) format("eot"), url($woffFileSrc) format("woff"), url($ttfFileSrc) format("truetype");
+}
+
+@mixin outline-radius($radius: 5px) {
+  @include prefix("outline-radius", $radius);
+}
+
+@mixin resize($direction: both) {
+  @include prefix("resize", $direction);
+}
+
+@mixin rotate($deg: 0) {
+  @include prefix("transform", rotate($deg + deg));
+}
+
+@mixin rotateX($deg: 0) {
+  @include prefix("transform", rotateX($deg + deg));
+}
+
+@mixin rotateY($deg: 0) {
+  @include prefix("transform", rotateY($deg + deg));
+}
+
+@mixin scale($scale: 1) {
+  @include prefix("transform", scale($scale));
+}
+
+@mixin scaleX($scaleX: 1) {
+  @include prefix("transform", scaleX($scaleX));
+}
+
+@mixin scaleY($scaleY: 1) {
+  @include prefix("transform", scaleY($scaleY));
+}
+
+@mixin translate3d($x: 0, $y: 0, $z: 0) {
+  @include prefix("transform", translate3d($x, $y, $z));
+}
+
+@mixin translate($x: 0, $y: 0) {
+  @include prefix("transform", translate($x, $y));
+}
+
+@mixin translateX($x: 0) {
+  @include prefix("transform", translateX($x));
+}
+
+@mixin translateY($y: 0) {
+  @include prefix("transform", translateY($y));
+}
+
+@mixin translateZ($z: 0) {
+  @include prefix("transform", translateZ($z));
+}
+
+@mixin skew($x: 0, $y: 0) {
+  @include prefix("transform", skew($x, $y));
+}
+
+@mixin skewX($x: 0) {
+  @include prefix("transform", skewX($x));
+}
+
+@mixin skewY($y: 0) {
+  @include prefix("transform", skewY($y));
+}
+
+@mixin text-shadow($vals) {
+  text-shadow: $vals;
+}
+
+@mixin transform($params) {
+  @include prefix("transform", $params);
+}
+
+@mixin transform-style($style: preserve-3d) {
+  @include prefix("transform-style", $style);
+}
+@mixin transform-origin($vals: 50% 50%) {
+  @include prefix("transform-origin", $vals);
+}
+@mixin transition($vals: all 0.3s ease) {
+  @include prefix("transition", $vals);
+}
+
+@mixin transition-duration($duration: 0.3s) {
+  @include prefix("transition-duration", $duration);
+}
+
+@mixin transition-delay($delay: 0s) {
+  @include prefix("transition-delay", $delay);
+}
+
+@mixin triple-borders($colorOne: #3c3c3c, $colorTwo: #999999, $colorThree: black, $radius: 0) {
+  border: 1px solid $colorOne;
+  @include border-radius($radius);
+  @include prefix("box-shadow", 0 0 0 1px $colorTwo, 0 0 0 2px $colorThree);
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+
+  @-ms-keyframes $animation-name {
+    @content;
+  }
+
+  @-o-keyframes $animation-name {
+    @content;
+  }
+
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  @include prefix("animation", $str);
+}
