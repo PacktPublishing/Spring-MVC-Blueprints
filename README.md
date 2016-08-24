@@ -4,7 +4,7 @@ This is the code repository for [Spring MVC Blueprints](https://www.packtpub.com
 
 ##Instructions and Navigation
 
-These instructions are common to all projects:
+####These instructions are common to all projects:
    * Prepare for your email incoming and outgoing addresses.
    * There must be Java 1.7 installed. 
    * Open this Maven project using STS 3.7
@@ -12,7 +12,7 @@ These instructions are common to all projects:
    * Must use Tomcat 7.x to deploy else just configure pom.xml ot run in Jetty or JBoss.
    * If Tomcat, run Maven using the command clean install tomcat:deploy
 
-These are additional project-specific instructions:
+####These are additional project-specific instructions:
 
 #####Chapter 2:
    * FTP server: URL, username and password! Fill in URL of FTP in UploadSingleFileFtpController
