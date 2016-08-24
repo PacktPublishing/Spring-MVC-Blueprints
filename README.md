@@ -5,12 +5,22 @@ This is the code repository for [Spring MVC Blueprints](https://www.packtpub.com
 ##Instructions and Navigation
 
 How to run the project:
-   1. Prepare for your email incoming and outgoing addresses.
-   2. There must be Java 1.7 installed. 
-   3. Open this Maven project using STS 3.7
-   4. Update the Maven project if needed.
-   5. Must use Tomcat 7.x to deploy else just configure pom.xml ot run in Jetty or JBoss.
-   6. If Tomcat, run Maven using the command clean install tomcat:deploy
+  * Prepare for your email incoming and outgoing addresses.
+   * There must be Java 1.7 installed. 
+   * Open this Maven project using STS 3.7
+   * Update the Maven project if needed.
+   * Must use Tomcat 7.x to deploy else just configure pom.xml ot run in Jetty or JBoss.
+   * If Tomcat, run Maven using the command clean install tomcat:deploy
+   * FTP server: URL, username and password! Fill in URL of FTP in UploadSingleFileFtpController.
+   * Sign-up for SendGrdi account (free account) and get the api-user and api-key
+   * Sign-up for Google recaptch account and generate our own private key 
+   * Preferred to use Java 1.6. There are bugs when Java 1.7 version is used.
+   * For the BTM-JTA Manager configuration, all files are inside jata-server-conf folder
+   * If Apache Pluto, run Maven using the command clean install tomcat:deploy
+   * Must use Apache Pluto server for portlets to deploy else just configure pom.xml ot run in Jetty or JBoss.
+   * For the BTM-JTA Manager configuration, all files are inside jata-server-conf folder
+   * Needs to install Rabbit MQ server and erlang
+   * Needs to install Apache Active MQ
 
 #####Code Snippet:
 ```
