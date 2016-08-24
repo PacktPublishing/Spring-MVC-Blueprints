@@ -5,7 +5,7 @@ This is the code repository for [Spring MVC Blueprints](https://www.packtpub.com
 ##Instructions and Navigation
 
 How to run the project:
-  * Prepare for your email incoming and outgoing addresses.
+   * Prepare for your email incoming and outgoing addresses.
    * There must be Java 1.7 installed. 
    * Open this Maven project using STS 3.7
    * Update the Maven project if needed.
