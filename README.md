@@ -12,19 +12,24 @@ How to run the project:
    5. Must use Tomcat 7.x to deploy else just configure pom.xml ot run in Jetty or JBoss.
    6. If Tomcat, run Maven using the command clean install tomcat:deploy
 
-Code Snipet:
+Code Snippet:
 ```
-import UIKit
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-    
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        return true
-    }
+package org.packt.edms.portal.model.form;
+import java.util.List;
+import org.springframework.web.multipart.MultipartFile;
+public class MultipleFilesUploadForm {
+private List<MultipartFile> files;
+public List<MultipartFile> getFiles() {
+   return files;
+   }
+   public void setFiles(List<MultipartFile> files) {
+   this.files = files;
+   }
 }
 ```
 
 ##Related Spring Products:
-* 
+* [Spring MVC Beginner’s Guide](https://www.packtpub.com/application-development/spring-mvc-beginner%E2%80%99s-guide?utm_source=Github&utm_medium=Repository&utm_campaign=9781783284870)
+* [Learning Spring Boot](https://www.packtpub.com/application-development/learning-spring-boot?utm_source=Github&utm_medium=Repository&utm_campaign=9781784393021)
+* [Spring Security [Video]](https://www.packtpub.com/application-development/spring-security-video?utm_source=Github&utm_medium=Repository&utm_campaign=9781782168652)
+
