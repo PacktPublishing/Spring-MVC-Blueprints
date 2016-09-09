@@ -1,4 +1,4 @@
-# Spring-MVC-Blueprints
+# Spring MVC Blueprints
 
 This is the code repository for [Spring MVC Blueprints](https://www.packtpub.com/application-development/spring-mvc-blueprints?utm_source=github&utm_medium=repository&utm_campaign=9781785888274), published by Packt Publishing. It contains all the supporting project files necessary to work through the book from start to finish.
 
