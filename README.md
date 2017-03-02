@@ -1,3 +1,5 @@
+[![GitHub issues](https://img.shields.io/github/issues/PacktPublishing/Spring-MVC-Blueprints.svg)](https://github.com/PacktPublishing/Spring-MVC-Blueprints/issues)   [![GitHub forks](https://img.shields.io/github/forks/PacktPublishing/Spring-MVC-Blueprints.svg)](https://github.com/PacktPublishing/Spring-MVC-Blueprints/network)   [![GitHub stars](https://img.shields.io/github/stars/PacktPublishing/Spring-MVC-Blueprints.svg)](https://github.com/PacktPublishing/Spring-MVC-Blueprints/stargazers)
+
 # Spring MVC Blueprints
 
 This is the code repository for [Spring MVC Blueprints](https://www.packtpub.com/application-development/spring-mvc-blueprints?utm_source=github&utm_medium=repository&utm_campaign=9781785888274), published by Packt Publishing. It contains all the supporting project files necessary to work through the book from start to finish.
