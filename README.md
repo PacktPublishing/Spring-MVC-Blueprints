@@ -1,7 +1,3 @@
-## [Get this title for $10 on Packt's Spring Sale](https://www.packt.com/B04862?utm_source=github&utm_medium=packt-github-repo&utm_campaign=spring_10_dollar_2022)
------
-For a limited period, all eBooks and Videos are only $10. All the practical content you need \- by developers, for developers
-
 [![GitHub issues](https://img.shields.io/github/issues/PacktPublishing/Spring-MVC-Blueprints.svg)](https://github.com/PacktPublishing/Spring-MVC-Blueprints/issues)   [![GitHub forks](https://img.shields.io/github/forks/PacktPublishing/Spring-MVC-Blueprints.svg)](https://github.com/PacktPublishing/Spring-MVC-Blueprints/network)   [![GitHub stars](https://img.shields.io/github/stars/PacktPublishing/Spring-MVC-Blueprints.svg)](https://github.com/PacktPublishing/Spring-MVC-Blueprints/stargazers)   [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/PacktPublishing/Spring-MVC-Blueprints/master/LICENSE)
 
 # Spring MVC Blueprints
