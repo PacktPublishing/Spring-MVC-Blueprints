@@ -8,7 +8,7 @@
   <description>Electronic Document Management System</description>
    <!-- properties -->
   <properties>
-        <spring.version>4.1.2.RELEASE</spring.version>
+        <spring.version>5.2.20.RELEASE</spring.version>
         <servlet.api.version>3.0.1</servlet.api.version>
         <mysql.version>5.1.31</mysql.version>
   </properties>
